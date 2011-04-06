@@ -1,5 +1,8 @@
+" C:\My\Programs\Vim\vim73\gvim.exe +bd -u %USERPROFILE%/vimfiles/_vimrc
+ 
 set nocompatible
 
+set runtimepath+=$USERPROFILE/vimfiles/bundle/vim-pathogen
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 filetype plugin indent on
