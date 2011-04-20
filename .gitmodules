@@ -13,9 +13,6 @@
 [submodule "bundle/vim-yui3"]
 	path = bundle/vim-yui3
 	url = http://github.com/rgrove/vim-yui3
-[submodule "bumdle/vim-jade"]
-	path = bumdle/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = git://github.com/digitaltoad/vim-jade.git
