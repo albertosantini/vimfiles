@@ -120,7 +120,7 @@ autocmd! BufNewFile * silent! 0r $HOME/vimfiles/skel/tmpl.%:e
 
 augroup web
 autocmd!
-autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\ \"C:\My\Programs\JSLint\js.jar\"\ \"C:\My\Programs\JSLint\jslint.js\"\ \"%\"
+autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\ \"C:\My\Programs\ZApps\js.jar\"\ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m :silent make<cr>:cw<cr>:cc<cr>
 autocmd BufWrite *.js :%s/\s\+$//ge
