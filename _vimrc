@@ -74,7 +74,6 @@ set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set number
 set showcmd
-set incsearch
 
 set ignorecase
 set smartcase
@@ -127,7 +126,7 @@ autocmd!
 autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\ \"C:\My\Programs\ZApps\js.jar\"\ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m :silent make<cr>:cw<cr>:cc<cr>
-autocmd BufWrite *.js :%s/\s\+$//ge
+autocmd BufWrite *.html,*.js :%s/\s\+$//ge
 augroup END
 
 augroup rproject
