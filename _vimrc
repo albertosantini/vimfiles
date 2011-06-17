@@ -1,9 +1,10 @@
 " C:\My\Programs\Vim\vim73\gvim.exe +bd -u %USERPROFILE%/vimfiles/_vimrc
- 
+
 set nocompatible
+set encoding=utf-8
 
 set runtimepath+=$USERPROFILE/vimfiles/bundle/vim-pathogen
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 
@@ -24,7 +25,7 @@ augroup END
 
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 source $VIMRUNTIME/mswin.vim
@@ -40,6 +41,9 @@ winpos 25 100
 set modelines=0
 
 set viminfo+=%
+
+set list
+set listchars=tab:>-,trail:$
 
 set backspace=indent,eol,start
 set history=1000
@@ -63,7 +67,7 @@ set nowrap
 set lines=48
 set columns=100
 set colorcolumn=80
-set printoptions=paper:a4,syntax:n 
+set printoptions=paper:a4,syntax:n
 
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
@@ -108,7 +112,7 @@ nmap <leader>e :e! $MYVIMRC<cr>
 
 nnoremap ; :
 nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>gd :DiffOrig<cr> 
+nnoremap <leader>gd :DiffOrig<cr>
 nnoremap <leader>gD :diffoff!<cr><c-w>h:bd<cr>
 nnoremap j gj
 nnoremap k gk
@@ -125,7 +129,7 @@ autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m :silent make<cr>:cw<cr>:cc<cr>
 autocmd BufWrite *.js :%s/\s\+$//ge
 augroup END
- 
+
 augroup rproject
 autocmd!
 autocmd BufRead,BufNewFile *.R set filetype=R
