@@ -31,7 +31,6 @@ endif
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-runtime plugin/fugitive.vim
 let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
 
 let g:NERDSpaceDelims=1
