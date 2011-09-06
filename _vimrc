@@ -8,7 +8,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 
-let $MYVIMRC="$HOME/vimfiles/_vimrc"
+let $MYVIMRC="~/vimfiles/_vimrc"
 
 let $PATH=$PATH . ";C:/My/Programs/Git/bin;C:/My/Programs/Ant/bin"
 let $JAVA_HOME="C:\\Program Files (x86)\\Java\\jdk1.6.0_24"
@@ -16,7 +16,7 @@ let $JAVA_HOME="C:\\Program Files (x86)\\Java\\jdk1.6.0_24"
 augroup vimrc
 autocmd!
 autocmd FileType text setlocal textwidth=78
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
 \ if line("'\"") > 1 && line("'\"") <= line("$") |
 \   execute "normal! g`\"" |
