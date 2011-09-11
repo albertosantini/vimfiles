@@ -3,9 +3,11 @@
 set nocompatible
 set encoding=utf-8
 
-set runtimepath+=$USERPROFILE/vimfiles/bundle/vim-pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+syntax on
+syntax sync fromstart
 filetype plugin indent on
 
 let $MYVIMRC="~/vimfiles/_vimrc"
@@ -131,9 +133,6 @@ autocmd BufRead,BufNewFile *.R set filetype=R
 autocmd BufRead,BufNewFile *.R let &l:commentstring='#%s'
 autocmd BufWrite *.R :%s/\s\+$//ge
 augroup END
-
-syntax on
-syntax sync fromstart
 
 set background=dark
 highlight clear
