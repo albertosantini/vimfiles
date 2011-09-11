@@ -137,19 +137,27 @@ augroup END
 set background=dark
 highlight clear
 syntax reset
-highlight Normal guifg=White   guibg=Black
-highlight Cursor guifg=Black   guibg=Red
-highlight Keyword guifg=#FF6600
-highlight Comment guifg=#9933CC
-highlight Type guifg=White gui=NONE
-highlight Identifier guifg=White gui=NONE
-highlight Constant guifg=#FFEE98
-highlight Function guifg=#FFCC00 gui=NONE
-highlight Statement guifg=#FF6600 gui=NONE
-highlight String guifg=Green
-highlight Search guibg=White
-highlight CursorLine guibg=#323300
+highlight Normal guifg=White guibg=Black
 highlight ColorColumn guibg=#2d2d2d
+highlight Cursor guifg=Black guibg=Red
+highlight CursorLine guibg=#323300
+highlight Search guibg=White
+highlight Boolean guifg=Yellow gui=NONE
+highlight Comment guifg=Magenta gui=NONE
+highlight Conditional guifg=Red gui=NONE
+highlight Constant guifg=Yellow gui=NONE
+highlight Float guifg=LightYellow gui=NONE
+highlight Function guifg=Orange gui=NONE
+highlight Identifier guifg=LightRed gui=NONE
+highlight Keyword guifg=Red gui=NONE
+highlight Label guifg=Red gui=NONE
+highlight Number guifg=LightYellow gui=NONE
+highlight Operator guifg=Red gui=NONE
+highlight Repeat guifg=Red gui=NONE
+highlight Special guifg=Red gui=NONE
+highlight Statement guifg=Red gui=NONE
+highlight String guifg=Green gui=NONE
+highlight Type guifg=Orange gui=NONE
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
