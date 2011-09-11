@@ -150,7 +150,7 @@ highlight Float guifg=LightYellow gui=NONE
 highlight Function guifg=Orange gui=NONE
 highlight Identifier guifg=LightRed gui=NONE
 highlight Keyword guifg=Red gui=NONE
-highlight Label guifg=Red gui=NONE
+highlight Label guifg=LightRed gui=NONE
 highlight Number guifg=LightYellow gui=NONE
 highlight Operator guifg=Red gui=NONE
 highlight Repeat guifg=Red gui=NONE
