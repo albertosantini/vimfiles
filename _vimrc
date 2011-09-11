@@ -10,9 +10,6 @@ filetype plugin indent on
 
 let $MYVIMRC="~/vimfiles/_vimrc"
 
-let $PATH=$PATH . ";C:/My/Programs/Git/bin;C:/My/Programs/Ant/bin"
-let $JAVA_HOME="C:\\Program Files (x86)\\Java\\jdk1.6.0_24"
-
 augroup vimrc
 autocmd!
 autocmd FileType text setlocal textwidth=78
