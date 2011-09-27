@@ -3,6 +3,7 @@
 set nocompatible
 set encoding=utf-8
 
+filetype off
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
@@ -31,8 +32,6 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
-
-let g:NERDSpaceDelims=1
 
 winpos 25 100
 
