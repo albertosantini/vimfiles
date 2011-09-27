@@ -60,17 +60,18 @@ set guioptions-=T
 set guioptions-=r
 set guifont=Lucida_Console
 
+set number
 set nowrap
 set lines=48
 set columns=100
 set colorcolumn=80
 set printoptions=paper:a4,syntax:n
 
-set ruler
-set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set number
-set showcmd
+set laststatus=2
+set statusline=
+set statusline+=%<%f\ %h%m%r%w%{fugitive#statusline()}\ %y:b%n
+set statusline+=%=
+set statusline+=%-14.(%l,%c%V%)\ %P
 
 set ignorecase
 set smartcase
@@ -118,9 +119,12 @@ vnoremap > >gv
 
 augroup web
 autocmd!
-autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\ \"C:\My\Programs\ZApps\js.jar\"\ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
+autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
+\ \"C:\My\Programs\ZApps\js.jar\"\
+\ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
-autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m :silent make<cr>:cw<cr>:cc<cr>
+autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
+\ :silent make<cr>:cw<cr>:cc<cr>
 autocmd BufWrite *.html,*.js :%s/\s\+$//ge
 augroup END
 
