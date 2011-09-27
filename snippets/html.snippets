@@ -1,0 +1,26 @@
+snippet html
+	<!DOCTYPE html>
+
+	<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>${1:title}</title>
+	</head>
+
+	<body>
+
+		<h1>$1</h1>
+
+	<div id="results"></div>
+
+	<script src="http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js"></script>
+
+	<script>
+	/*global YUI */
+
+	YUI().use("node", function (Y) {
+	});
+	</script>
+
+	</body>
+	</html>

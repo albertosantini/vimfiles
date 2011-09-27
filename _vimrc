@@ -31,6 +31,7 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
+let g:snippets_dir='$HOME/vimfiles/snippets'
 
 winpos 25 100
 
@@ -114,8 +115,6 @@ nnoremap k gk
 
 vnoremap < <gv
 vnoremap > >gv
-
-autocmd! BufNewFile * silent! 0r $HOME/vimfiles/skel/tmpl.%:e
 
 augroup web
 autocmd!
