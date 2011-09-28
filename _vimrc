@@ -33,6 +33,8 @@ behave mswin
 let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
 let g:snippets_dir='$HOME/vimfiles/snippets'
 
+inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
+
 winpos 25 100
 
 set modelines=0
