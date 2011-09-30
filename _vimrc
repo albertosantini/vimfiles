@@ -35,7 +35,7 @@ let g:snippets_dir='$HOME/vimfiles/snippets'
 
 inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
-winpos 25 100
+winpos 50 0
 
 set modelines=0
 
@@ -60,7 +60,7 @@ set wildignore=.exe
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-set guifont=Lucida_Console
+set guifont=Lucida_Console:h12
 
 set number
 set nowrap
