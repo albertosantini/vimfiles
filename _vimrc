@@ -127,13 +127,14 @@ autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
 \ :silent make<cr>:cw<cr>:cc<cr>
-autocmd BufWrite *.html,*.js :%s/\s\+$//ge
+autocmd BufRead,BufNewFile *.json set filetype=javascript
+autocmd BufWrite *.html,*.js,*,json :%s/\s\+$//ge
 augroup END
 
 augroup rproject
 autocmd!
 autocmd BufRead,BufNewFile *.R set filetype=R
-autocmd BufRead,BufNewFile *.R let &l:commentstring='#%s'
+autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
 autocmd BufWrite *.R :%s/\s\+$//ge
 augroup END
 
