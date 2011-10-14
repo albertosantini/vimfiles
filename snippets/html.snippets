@@ -3,17 +3,20 @@ snippet html
 
 	<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>${1:title}</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="">
 	</head>
 
 	<body>
 
-		<h1>$1</h1>
+	<h1>$1</h1>
 
 	<div id="results"></div>
 
-	<script src="http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js"></script>
+	<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
 
 	<script>
 	/*global YUI */
