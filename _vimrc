@@ -129,7 +129,6 @@ autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
 \ :silent make<cr>:cw<cr>:cc<cr>
-autocmd BufRead,BufNewFile *.html imap <buffer> <C-j> <ESC>F<lyt>$a</<C-R>">
 autocmd BufRead,BufNewFile *.js set nocindent
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufWrite *.html,*.js,*,json :%s/\s\+$//ge
