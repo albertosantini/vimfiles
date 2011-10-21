@@ -32,9 +32,6 @@ behave mswin
 
 let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
 let g:snippets_dir='$HOME/vimfiles/snippets'
-let g:delimitMate_expand_cr=1
-
-inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
 winpos 25 100
 
@@ -123,6 +120,13 @@ vnoremap > >gv
 
 augroup web
 autocmd!
+autocmd BufRead,BufNewFile *.js inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
+autocmd BufRead,BufNewFile *.js inoremap <buffer> ( ()<Esc>a<Left>
+autocmd BufRead,BufNewFile *.js inoremap <buffer> [ []<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> " ""<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ' ''<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> <C-Tab> <Esc><Right>a
 autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
 \ \"C:\My\Programs\ZApps\js.jar\"\
 \ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
