@@ -120,10 +120,10 @@ vnoremap > >gv
 
 augroup web
 autocmd!
-autocmd BufRead,BufNewFile *.js inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
-autocmd BufRead,BufNewFile *.js inoremap <buffer> ( ()<Esc>a<Left>
-autocmd BufRead,BufNewFile *.js inoremap <buffer> [ []<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> {<CR> {<CR>}<Esc>O
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ( ()<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> [ []<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> " ""<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ' ''<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> <C-Tab> <Esc><Right>a
@@ -133,7 +133,6 @@ autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
 \ :silent make<cr>:cw<cr>:cc<cr>
-autocmd BufRead,BufNewFile *.js set nocindent
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufWrite *.html,*.js,*,json :%s/\s\+$//ge
 augroup END
