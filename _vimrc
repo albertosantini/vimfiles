@@ -120,8 +120,10 @@ vnoremap > >gv
 
 augroup web
 autocmd!
+autocmd BufRead,BufNewFile *.js set nocindent
 autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> {<CR> {<CR>}<Esc>O
+autocmd BufRead,BufNewFile *.js inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
+autocmd BufRead,BufNewFile *.html inoremap <buffer> {<CR> {<CR>}<Esc>O
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ( ()<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> [ []<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> " ""<Esc>a<Left>
