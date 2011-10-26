@@ -118,32 +118,40 @@ nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
 
-augroup web
+augroup dev
 autocmd!
+
+autocmd BufRead,BufNewFile *.html inoremap \
+            \ <buffer> < <><Esc>a<Left>
+autocmd BufRead,BufNewFile *.html inoremap \
+            \ <buffer> {<CR> {<CR>}<Esc>O
+autocmd BufRead,BufNewFile *.js,*.json,*.R inoremap \
+            \ <buffer> {<CR> {<CR>}<Esc>O<Tab>
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R inoremap \
+            \ <buffer> ( ()<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R inoremap \
+            \ <buffer> [ []<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R inoremap \
+            \ <buffer> " ""<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R inoremap \
+            \ <buffer> ' ''<Esc>a<Left>
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R inoremap \
+            \ <buffer> <C-Tab> <Esc><Right>a
+
 autocmd BufRead,BufNewFile *.js set nocindent
-autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.js inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
-autocmd BufRead,BufNewFile *.html inoremap <buffer> {<CR> {<CR>}<Esc>O
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ( ()<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> [ []<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> " ""<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> ' ''<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js inoremap <buffer> <C-Tab> <Esc><Right>a
+
 autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
-\ \"C:\My\Programs\ZApps\js.jar\"\
-\ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
+            \ \"C:\My\Programs\ZApps\js.jar\"\
+            \ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
 autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
-\ :silent make<cr>:cw<cr>:cc<cr>
-autocmd BufRead,BufNewFile *.json set filetype=javascript
-autocmd BufWrite *.html,*.js,*,json :%s/\s\+$//ge
-augroup END
+            \ :silent make<cr>:cw<cr>:cc<cr>
 
-augroup rproject
-autocmd!
+autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufRead,BufNewFile *.R set filetype=R
 autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
-autocmd BufWrite *.R :%s/\s\+$//ge
+
+autocmd BufWrite *.html,*.js,*,json,*.R :%s/\s\+$//ge
 augroup END
 
 set background=dark
