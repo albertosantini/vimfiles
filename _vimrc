@@ -134,7 +134,7 @@ autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
 autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
             \ inoremap <buffer> ' ''<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
-            \ inoremap <buffer> <C-Tab> <Esc><Right>
+            \ inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd BufRead,BufNewFile *.js set nocindent
 
