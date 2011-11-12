@@ -62,9 +62,12 @@ set guifont=Lucida_Console
 
 set number
 set nowrap
-set lines=48
+set lines=51
 set columns=100
 set colorcolumn=80
+set cmdheight=2
+set noshowcmd
+
 set printoptions=paper:a4,syntax:n
 
 set laststatus=2
