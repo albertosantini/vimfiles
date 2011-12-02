@@ -141,11 +141,11 @@ autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
 
 autocmd BufRead,BufNewFile *.js set nocindent
 
-autocmd BufRead,BufNewFile *.html,*.js set makeprg=java\ -jar\
+autocmd BufRead,BufNewFile *.html,*.js,*.json set makeprg=java\ -jar\
             \ \"C:\My\Programs\ZApps\js.jar\"\
             \ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
-autocmd BufRead,BufNewFile *.html,*.js set efm=%f:%l:%m
-autocmd BufRead,BufNewFile *.html,*.js nmap <buffer> <leader>m
+autocmd BufRead,BufNewFile *.html,*.js,*.json set efm=%f:%l:%m
+autocmd BufRead,BufNewFile *.html,*.js,*.json nmap <buffer> <leader>m
             \ :silent make<cr>:cw<cr>:cc<cr>
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
