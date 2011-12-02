@@ -30,7 +30,7 @@ endif
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-let g:fugitive_git_executable='C:/My/Programs/Git/bin/git'
+let g:fugitive_git_executable='C:/My/Programs/Git/cmd/git'
 let g:snippets_dir='$HOME/vimfiles/snippets'
 
 winpos 25 100
