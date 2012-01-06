@@ -125,9 +125,6 @@ augroup dev
 autocmd!
 
 autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.html inoremap <buffer> {<CR> {<CR>}<Esc>O
-autocmd BufRead,BufNewFile *.js,*.json,*.R
-            \ inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
 autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> ( ()<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
