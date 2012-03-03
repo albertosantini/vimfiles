@@ -12,6 +12,12 @@ filetype plugin indent on
 
 let $MYVIMRC="~/vimfiles/_vimrc"
 
+set shell=C:/My/Programs/Git/bin/bash
+set shellcmdflag=--login\ -c
+set shellslash
+
+nmap <f12> :!start C:\My\Programs\Git\bin\sh --login -i<cr>
+
 augroup vimrc
 autocmd!
 autocmd FileType text setlocal textwidth=78
@@ -30,7 +36,6 @@ endif
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-let g:fugitive_git_executable='C:/My/Programs/Git/cmd/git'
 let g:snippets_dir='$HOME/vimfiles/snippets'
 
 winpos 25 100
@@ -108,7 +113,6 @@ nmap <s-f4> :cw<cr>:cp<cr>
 nmap <f5> :!start cmd /c %:p<cr>
 nmap <f6> :bn<cr>
 nmap <s-f6> :bp<cr>
-nmap <f12> :!start cmd /f<cr>
 nmap <leader>e :e! $MYVIMRC<cr>
 
 nnoremap ; :
@@ -139,8 +143,8 @@ autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
 autocmd BufRead,BufNewFile *.js set nocindent
 
 autocmd BufRead,BufNewFile *.html,*.js,*.json set makeprg=java\ -jar\
-            \ \"C:\My\Programs\ZApps\js.jar\"\
-            \ \"C:\My\Programs\ZApps\jslint.js\"\ \"%\"
+            \ \"C:/My/Programs/ZApps/js.jar\"\
+            \ \"C:/My/Programs/ZApps/jslint.js\"\ \"%\"
 autocmd BufRead,BufNewFile *.html,*.js,*.json set efm=%f:%l:%m
 autocmd BufRead,BufNewFile *.html,*.js,*.json nmap <buffer> <leader>m
             \ :silent make<cr>:cw<cr>:cc<cr>
