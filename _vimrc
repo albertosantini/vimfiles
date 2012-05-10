@@ -129,15 +129,15 @@ augroup dev
 autocmd!
 
 autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R,*.m
             \ inoremap <buffer> ( ()<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> [ []<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> " ""<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> ' ''<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd BufRead,BufNewFile *.js set nocindent
@@ -152,7 +152,7 @@ autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufRead,BufNewFile *.R set filetype=R
 autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
 
-autocmd BufWrite *.html,*.js,*,json,*.R :%s/\s\+$//ge
+autocmd BufWrite *.html,*.js,*,json,*.R,*.m :%s/\s\+$//ge
 
 augroup END
 
