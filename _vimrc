@@ -143,14 +143,21 @@ autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
 autocmd BufRead,BufNewFile *.js set nocindent
 
 autocmd BufRead,BufNewFile *.html,*.js,*.json
-            \ set makeprg=node\ C:/My/Programs/Zapps/lint.js\ %
+            \ setlocal makeprg=node\ C:/My/Programs/Zapps/lint.js\ %
 autocmd BufRead,BufNewFile *.html,*.js,*.json set efm=%f:%l:%m
-autocmd BufRead,BufNewFile *.html,*.js,*.json nmap <buffer> <leader>m
-            \ :silent make<cr>:cw<cr>:cc<cr>
+autocmd BufRead,BufNewFile *.html,*.js,*.json
+            \ nnoremap <buffer> <leader>m
+                \ :silent make<cr>:cw<cr>:cc<cr>
+
+autocmd BufReadPost quickfix nnoremap <buffer> <silent> q :bd<CR>
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
+
 autocmd BufRead,BufNewFile *.R set filetype=R
 autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
+autocmd BufRead,BufNewFile *.R
+            \ nnoremap <buffer> <leader>r
+                \ :Shell c:/My/Programs/R/R-2.15.0/bin/i386/Rscript.exe %<cr>
 
 autocmd BufWrite *.html,*.js,*,json,*.R,*.m :%s/\s\+$//ge
 
@@ -184,8 +191,31 @@ highlight Type guifg=Orange gui=NONE
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Display output of shell commands in new window
+command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
+function! s:RunShellCommand(cmdline)
+    " echo a:cmdline
+    let exp_cmdline = a:cmdline
+    for part in split(a:cmdline, ' ')
+        if part[0] =~ '\v[%#<]'
+            let exp_part = fnameescape(expand(part))
+            let exp_cmdline = substitute(exp_cmdline, part, exp_part, '')
+        endif
+    endfor
+    botright new
+    setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+    " call setline(1, 'You entered:    ' . a:cmdline)
+    " call setline(2, 'Expanded Form:  ' .expanded_cmdline)
+    " call setline(3,substitute(getline(2),'.','=','g'))
+    execute '$read !'. exp_cmdline
+    setlocal nomodifiable
+    nnoremap <buffer> <silent> q :bd<CR>
+    1
+endfunction
+
