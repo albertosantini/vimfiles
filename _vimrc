@@ -135,7 +135,7 @@ autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> [ []<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> " ""<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
+autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
             \ inoremap <buffer> ' ''<Esc>a<Left>
 autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
             \ inoremap <buffer> <C-Tab> <Esc><Right>a
