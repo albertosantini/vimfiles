@@ -129,15 +129,15 @@ augroup dev
 autocmd!
 
 autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R,*.m
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> ( ()<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> [ []<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> " ""<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> ' ''<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*,json,*.R,*.m
+autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
             \ inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd BufRead,BufNewFile *.js set nocindent
@@ -159,7 +159,7 @@ autocmd BufRead,BufNewFile *.R
             \ nnoremap <buffer> <leader>r
                 \ :Shell c:/My/Programs/R/R-2.15.0/bin/i386/Rscript.exe %<cr>
 
-autocmd BufWrite *.html,*.js,*,json,*.R,*.m :%s/\s\+$//ge
+autocmd BufWrite *.html,*.js,*.json,*.R :%s/\s\+$//ge
 
 augroup END
 
@@ -200,7 +200,6 @@ endfunc
 " Display output of shell commands in new window
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 function! s:RunShellCommand(cmdline)
-    " echo a:cmdline
     let exp_cmdline = a:cmdline
     for part in split(a:cmdline, ' ')
         if part[0] =~ '\v[%#<]'
@@ -210,9 +209,6 @@ function! s:RunShellCommand(cmdline)
     endfor
     botright new
     setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-    " call setline(1, 'You entered:    ' . a:cmdline)
-    " call setline(2, 'Expanded Form:  ' .expanded_cmdline)
-    " call setline(3,substitute(getline(2),'.','=','g'))
     execute '$read !'. exp_cmdline
     setlocal nomodifiable
     nnoremap <buffer> <silent> q :bd<CR>
