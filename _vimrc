@@ -157,7 +157,7 @@ autocmd BufRead,BufNewFile *.R set filetype=R
 autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
 autocmd BufRead,BufNewFile *.R
             \ nnoremap <buffer> <leader>r
-                \ :Shell c:/My/Programs/R/R-2.15.0/bin/i386/Rscript.exe %<cr>
+                \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
 autocmd BufWrite *.html,*.js,*.json,*.R :%s/\s\+$//ge
 
