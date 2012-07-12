@@ -12,12 +12,6 @@ filetype plugin indent on
 
 let $MYVIMRC="~/vimfiles/_vimrc"
 
-set shell=C:/My/Programs/Git/bin/bash
-set shellcmdflag=--login\ -c
-set shellslash
-
-nmap <f12> :!start C:\My\Programs\Git\bin\sh --login -i<cr>
-
 augroup vimrc
 autocmd!
 autocmd FileType text setlocal textwidth=78
@@ -77,7 +71,7 @@ set printoptions=paper:a4,syntax:n
 
 set laststatus=2
 set statusline=
-set statusline+=%<%f\ %h%m%r%w%{fugitive#statusline()}\ %y:b%n
+set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
 autocmd! InsertEnter * set cursorline
