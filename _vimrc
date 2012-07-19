@@ -182,14 +182,9 @@ highlight Statement guifg=Red gui=NONE
 highlight String guifg=Green gui=NONE
 highlight Type guifg=Orange gui=NONE
 
-" Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+" Display the syntax name under the cursor
+nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")<cr>
+
 
 " Display output of shell commands in new window
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
