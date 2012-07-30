@@ -151,6 +151,7 @@ autocmd BufRead,BufNewFile *.R
                 \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
 autocmd BufWrite *.html,*.js,*.json,*.R :%s/\s\+$//ge
+autocmd BufWrite *.html,*.js,*.json,*.R :%s/\($\n\s*\)\+\%$//
 
 augroup END
 
