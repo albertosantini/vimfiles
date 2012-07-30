@@ -14,18 +14,13 @@ let $MYVIMRC="~/vimfiles/_vimrc"
 
 augroup vimrc
 autocmd!
-autocmd FileType text setlocal textwidth=78
+autocmd FileType text setlocal textwidth=80
 autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
 \ if line("'\"") > 1 && line("'\"") <= line("$") |
 \   execute "normal! g`\"" |
 \ endif
 augroup END
-
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-      \ | wincmd p | diffthis
-endif
 
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -64,12 +59,13 @@ set nowrap
 set lines=51
 set columns=100
 set colorcolumn=80
-set cmdheight=2
+set cmdheight=1
 set noshowcmd
+set noshowmode
 
 set printoptions=paper:a4,syntax:n
 
-set laststatus=2
+set laststatus=1
 set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
@@ -184,8 +180,7 @@ highlight String guifg=Green gui=NONE
 highlight Type guifg=Orange gui=NONE
 
 " Display the syntax name under the cursor
-nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")<cr>
-
+nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<cr>
 
 " Display output of shell commands in new window
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
