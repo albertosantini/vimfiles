@@ -14,12 +14,11 @@ let $MYVIMRC="~/vimfiles/_vimrc"
 
 augroup vimrc
 autocmd!
-autocmd FileType text setlocal textwidth=80
 autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
-\ if line("'\"") > 1 && line("'\"") <= line("$") |
-\   execute "normal! g`\"" |
-\ endif
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
 augroup END
 
 source $VIMRUNTIME/mswin.vim
@@ -54,11 +53,12 @@ set guioptions-=T
 set guioptions-=r
 set guifont=Lucida_Console
 
-set number
+set relativenumber
 set nowrap
 set lines=51
 set columns=100
 set colorcolumn=80
+set textwidth=80
 set cmdheight=1
 set noshowcmd
 set noshowmode
@@ -70,8 +70,8 @@ set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
-autocmd! InsertEnter * set cursorline
-autocmd! InsertLeave * set nocursorline
+autocmd! InsertEnter * set cursorline number
+autocmd! InsertLeave * set nocursorline relativenumber
 
 set ignorecase
 set smartcase
