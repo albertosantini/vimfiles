@@ -150,8 +150,8 @@ autocmd BufRead,BufNewFile *.R
             \ nnoremap <buffer> <leader>r
                 \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
-autocmd BufWrite *.html,*.js,*.json,*.R :%s/\s\+$//ge
-autocmd BufWrite *.html,*.js,*.json,*.R :%s/\($\n\s*\)\+\%$//
+autocmd BufWrite *.html,*.js,*.json,*.R,*.markdown :%s/\s\+$//ge
+autocmd BufWrite *.html,*.js,*.json,*.R,*.markdown :%s/\($\n\s*\)\+\%$//
 
 augroup END
 
