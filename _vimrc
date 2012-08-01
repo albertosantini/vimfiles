@@ -70,8 +70,8 @@ set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
-autocmd! InsertEnter * set cursorline number
-autocmd! InsertLeave * set nocursorline relativenumber
+autocmd! InsertEnter * set cursorline
+autocmd! InsertLeave * set nocursorline
 
 set ignorecase
 set smartcase
@@ -176,7 +176,7 @@ highlight Operator guifg=Red gui=NONE
 highlight Repeat guifg=Red gui=NONE
 highlight Special guifg=Red gui=NONE
 highlight Statement guifg=Red gui=NONE
-highlight String guifg=Green gui=NONE
+highlight String guifg=#A5C261 gui=NONE
 highlight Type guifg=Orange gui=NONE
 
 " Display the syntax name under the cursor
