@@ -175,6 +175,7 @@ highlight Number guifg=LightYellow gui=NONE
 highlight Operator guifg=Red gui=NONE
 highlight Repeat guifg=Red gui=NONE
 highlight Special guifg=Red gui=NONE
+highlight SpecialChar guifg=LightBlue gui=NONE
 highlight Statement guifg=Red gui=NONE
 highlight String guifg=#A5C261 gui=NONE
 highlight Type guifg=Orange gui=NONE
