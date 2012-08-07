@@ -152,6 +152,8 @@ autocmd BufRead,BufNewFile *.R
 
 autocmd BufWrite *.html,*.js,*.json,*.R,*.markdown :%s/\s\+$//ge
 
+autocmd QuickFixCmdPost *grep* cwindow
+
 augroup END
 
 set background=dark
