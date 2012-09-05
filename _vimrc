@@ -53,7 +53,7 @@ set guioptions-=T
 set guioptions-=r
 set guifont=Lucida_Console
 
-set relativenumber
+set number
 set nowrap
 set lines=51
 set columns=100
