@@ -107,12 +107,10 @@ nmap <s-f6> :bp<cr>
 nmap <leader>e :e! $MYVIMRC<cr>
 
 nnoremap ; :
-nnoremap <leader>b :ls<cr>
-nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>gd :DiffOrig<cr>
-nnoremap <leader>gD :diffoff!<cr><c-w>h:bd<cr>
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>b :ls<cr>
+nnoremap <leader><space> :nohlsearch<cr>
 
 vnoremap < <gv
 vnoremap > >gv
