@@ -84,6 +84,7 @@ set expandtab
 set smarttab
 set autoindent
 set nojoinspaces
+set virtualedit=block
 
 let mapleader=","
 
