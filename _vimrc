@@ -145,7 +145,7 @@ autocmd BufRead,BufNewFile *-js.mustache set filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache set filetype=html
 autocmd BufRead,BufNewFile *.R set filetype=R
 
-autocmd BufWrite *.html,*.js,*.js:on,*.R,*.markdown :%s/\s\+$//ge
+autocmd BufWrite *.html,*.css,*.markdown,*.js,*.json,*.R :%s/\s\+$//ge
 
 autocmd BufReadPost quickfix nnoremap <buffer> <silent> q :bd<CR>
 
