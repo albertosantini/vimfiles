@@ -24,8 +24,6 @@ augroup END
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-let g:snippets_dir='$HOME/vimfiles/snippets'
-
 winpos 25 100
 
 set modelines=0
@@ -119,38 +117,37 @@ vnoremap > >gv
 augroup dev
 autocmd!
 
-autocmd BufRead,BufNewFile *.html inoremap <buffer> < <><Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
-            \ inoremap <buffer> ( ()<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
-            \ inoremap <buffer> [ []<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
-            \ inoremap <buffer> " ""<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
-            \ inoremap <buffer> ' ''<Esc>a<Left>
-autocmd BufRead,BufNewFile *.html,*.js,*.json,*.R
-            \ inoremap <buffer> <C-Tab> <Esc><Right>a
+autocmd FileType html inoremap <buffer> < <><Esc>a<Left>
 
-autocmd BufRead,BufNewFile *.js set nocindent
+autocmd FileType javascript,html,css,R inoremap <buffer> { {<cr>}<Esc>O<tab>
+autocmd FileType javascript,html,R inoremap <buffer> ( ()<Esc>a<Left>
+autocmd FileType javascript,html,R inoremap <buffer> [ []<Esc>a<Left>
+autocmd FileType javascript,html,R inoremap <buffer> " ""<Esc>a<Left>
+autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
+autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
-autocmd BufRead,BufNewFile *.html,*.js,*.json
+autocmd FileType javascript set nocindent
+
+autocmd FileType javascript,html
             \ setlocal makeprg=node\ C:/My/Programs/Zapps/lint.js\ %
-autocmd BufRead,BufNewFile *.html,*.js,*.json set efm=%f:%l:%m
-autocmd BufRead,BufNewFile *.html,*.js,*.json
+autocmd FileType javascript,html set efm=%f:%l:%m
+autocmd FileType javascript,html
             \ nnoremap <buffer> <leader>m
                 \ :silent make<cr>:cw<cr>:cc<cr>
 
-autocmd BufReadPost quickfix nnoremap <buffer> <silent> q :bd<CR>
-
-autocmd BufRead,BufNewFile *.json set filetype=javascript
-
-autocmd BufRead,BufNewFile *.R set filetype=R
-autocmd BufRead,BufNewFile *.R let &l:commentstring='# %s'
-autocmd BufRead,BufNewFile *.R
+autocmd FileType R let &l:commentstring='# %s'
+autocmd FileType R
             \ nnoremap <buffer> <leader>r
                 \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
-autocmd BufWrite *.html,*.js,*.json,*.R,*.markdown :%s/\s\+$//ge
+autocmd BufRead,BufNewFile *.json set filetype=javascript
+autocmd BufRead,BufNewFile *-js.mustache set filetype=javascript
+autocmd BufRead,BufNewFile *-html.mustache set filetype=html
+autocmd BufRead,BufNewFile *.R set filetype=R
+
+autocmd BufWrite *.html,*.js,*.js:on,*.R,*.markdown :%s/\s\+$//ge
+
+autocmd BufReadPost quickfix nnoremap <buffer> <silent> q :bd<CR>
 
 autocmd QuickFixCmdPost *grep* cwindow
 
