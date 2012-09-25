@@ -129,7 +129,7 @@ autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 autocmd FileType javascript set nocindent
 
 autocmd FileType javascript,html
-            \ setlocal makeprg=node\ C:/My/Programs/Zapps/lint.js\ %
+            \ setlocal makeprg=node\ ~/vimfiles/jslint.js\ %
 autocmd FileType javascript,html set efm=%f:%l:%m
 autocmd FileType javascript,html
             \ nnoremap <buffer> <leader>m
