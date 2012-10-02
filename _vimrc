@@ -142,6 +142,7 @@ autocmd FileType R
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufRead,BufNewFile *-js.mustache set filetype=javascript
+autocmd BufRead,BufNewFile *.ts set filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache set filetype=html
 autocmd BufRead,BufNewFile *.R set filetype=R
 
@@ -157,27 +158,27 @@ set background=dark
 highlight clear
 syntax reset
 highlight Normal guifg=White guibg=Black
-highlight ColorColumn guibg=#2d2d2d
+highlight ColorColumn guibg=#2D2D2D
 highlight Cursor guifg=Black guibg=Red
 highlight CursorLine guibg=black gui=undercurl
 highlight Search guibg=White
-highlight Boolean guifg=Yellow gui=NONE
-highlight Comment guifg=Magenta gui=NONE
-highlight Conditional guifg=Red gui=NONE
-highlight Constant guifg=Yellow gui=NONE
-highlight Float guifg=LightYellow gui=NONE
-highlight Function guifg=Orange gui=NONE
-highlight Identifier guifg=LightRed gui=NONE
-highlight Keyword guifg=Red gui=NONE
-highlight Label guifg=LightRed gui=NONE
-highlight Number guifg=LightYellow gui=NONE
-highlight Operator guifg=Red gui=NONE
-highlight Repeat guifg=Red gui=NONE
-highlight Special guifg=Red gui=NONE
-highlight SpecialChar guifg=LightBlue gui=NONE
-highlight Statement guifg=Red gui=NONE
-highlight String guifg=#A5C261 gui=NONE
-highlight Type guifg=Orange gui=NONE
+highlight Boolean guifg=Yellow gui=none
+highlight Comment guifg=Magenta gui=none
+highlight Conditional guifg=Red gui=none
+highlight Constant guifg=LightYellow gui=none
+highlight Float guifg=LightYellow gui=none
+highlight Function guifg=Orange gui=none
+highlight Identifier guifg=Red gui=none
+highlight Keyword guifg=Red gui=none
+highlight Label guifg=LightRed gui=none
+highlight Number guifg=LightYellow gui=none
+highlight Operator guifg=LightBlue gui=none
+highlight Repeat guifg=Red gui=none
+highlight Special guifg=LightRed gui=none
+highlight Statement guifg=Red gui=none
+highlight String guifg=#A5C261 gui=none
+highlight Title guifg=Orange gui=bold
+highlight Type guifg=LightRed gui=none
 
 " Display the syntax name under the cursor
 nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<cr>
