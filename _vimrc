@@ -108,7 +108,7 @@ nmap <leader>e :e! $MYVIMRC<cr>
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk
-nnoremap <leader>b :ls<cr>
+nnoremap <leader>l :ls<cr>
 nnoremap <leader><space> :nohlsearch<cr>
 
 vnoremap < <gv
