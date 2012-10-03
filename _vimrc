@@ -163,8 +163,8 @@ highlight Cursor guifg=Black guibg=Red
 highlight CursorLine guibg=black gui=undercurl
 highlight Search guibg=White
 highlight Boolean guifg=Yellow gui=none
-highlight Comment guifg=Magenta gui=none
-highlight Conditional guifg=Red gui=none
+highlight Comment guifg=Grey gui=none
+highlight Conditional guifg=Magenta gui=none
 highlight Constant guifg=LightYellow gui=none
 highlight Float guifg=LightYellow gui=none
 highlight Function guifg=Orange gui=none
