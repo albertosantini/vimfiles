@@ -148,7 +148,7 @@ autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 
-autocmd BufReadPost quickfix nnoremap <buffer> <silent> q :bd<CR>
+autocmd FileType qf nnoremap <buffer> <silent> q :bd<cr>
 
 autocmd QuickFixCmdPost *grep* cwindow
 
