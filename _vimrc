@@ -117,21 +117,23 @@ vnoremap > >gv
 augroup dev
 autocmd!
 
+autocmd FileType javascript setlocal filetype=typescript
+
 autocmd FileType html inoremap <buffer> < <><Esc>a<Left>
 
-autocmd FileType javascript,html,css,R inoremap <buffer> { {<cr>}<Esc>O<tab>
-autocmd FileType javascript,html,R inoremap <buffer> ( ()<Esc>a<Left>
-autocmd FileType javascript,html,R inoremap <buffer> [ []<Esc>a<Left>
-autocmd FileType javascript,html,R inoremap <buffer> " ""<Esc>a<Left>
-autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
-autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
+autocmd FileType typescript,html,css,R inoremap <buffer> { {<cr>}<Esc>O<tab>
+autocmd FileType typescript,html,R inoremap <buffer> ( ()<Esc>a<Left>
+autocmd FileType typescript,html,R inoremap <buffer> [ []<Esc>a<Left>
+autocmd FileType typescript,html,R inoremap <buffer> " ""<Esc>a<Left>
+autocmd FileType typescript,html,R inoremap <buffer> ' ''<Esc>a<Left>
+autocmd FileType typescript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
-autocmd FileType javascript setlocal nocindent
+autocmd FileType typescript setlocal nocindent
 
-autocmd FileType javascript,html
+autocmd FileType typescript,html
             \ setlocal makeprg=node\ ~/vimfiles/jslint.js\ %
-autocmd FileType javascript,html setlocal efm=%f:%l:%m
-autocmd FileType javascript,html
+autocmd FileType typescript,html setlocal efm=%f:%l:%m
+autocmd FileType typescript,html
             \ nnoremap <buffer> <leader>m
                 \ :silent make<cr>:cw<cr>:cc<cr>
 
@@ -140,9 +142,9 @@ autocmd FileType R
             \ nnoremap <buffer> <leader>r
                 \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
-autocmd BufRead,BufNewFile *.json setlocal filetype=javascript
-autocmd BufRead,BufNewFile *-js.mustache setlocal filetype=javascript
-autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript
+autocmd BufRead,BufNewFile *.json setlocal filetype=typescript
+autocmd BufRead,BufNewFile *-js.mustache setlocal filetype=typescript
+autocmd BufRead,BufNewFile *.ts setlocal filetype=typescript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
