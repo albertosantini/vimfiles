@@ -60,6 +60,7 @@ set textwidth=80
 set cmdheight=1
 set noshowcmd
 set noshowmode
+set nofoldenable
 
 set printoptions=paper:a4,syntax:n
 
@@ -145,6 +146,9 @@ autocmd BufRead,BufNewFile *-js.mustache setlocal filetype=javascript
 autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
+
+autocmd FileType javascript setlocal filetype=typescript
+autocmd FileType typescript let &l:commentstring='// %s'
 
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 
