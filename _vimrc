@@ -1,90 +1,98 @@
+" Notes and modelines {{{
+" vim: set foldlevel=0 foldmethod=marker :
+"
 " C:\My\Programs\Vim\vim73\gvim.exe +bd -u %USERPROFILE%/vimfiles/_vimrc
+" }}}
 
+" Environment {{{
 set nocompatible
 set encoding=utf-8
+" }}}
 
+" Setup Pathogen {{{
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+" }}}
 
+" General {{{
 syntax on
 syntax sync fromstart
 filetype plugin indent on
 
 let $MYVIMRC="~/vimfiles/_vimrc"
 
-augroup vimrc
-autocmd!
-autocmd BufWritePost _vimrc source %
-autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   execute "normal! g`\"" |
-    \ endif
-augroup END
-
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-winpos 25 100
-
-set modelines=0
-
-set viminfo+=%
-
-set list
-set listchars=tab:>-,trail:$
-
-set backspace=indent,eol,start
-set history=1000
-set undolevels=1000
-set visualbell
-
+set autochdir
+set autoread
 set hidden
+set history=1000
+set modelines=3
 set nobackup
 set noswapfile
+set undolevels=1000
+set viminfo+=%
+" }}}
 
-set autoread
-set autochdir
-set wildignore=.exe
+" Windows {{{
+if has('win32') || has('win64')
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+" }}}
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guifont=Lucida_Console
+" GUI {{{
+if has('gui_running')
+    winpos 25 100
 
-set number
-set nowrap
-set lines=51
-set columns=100
-set colorcolumn=80
-set textwidth=80
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guifont=Lucida_Console
+
+    set lines=51
+    set columns=100
+endif
+" }}}
+
+" UI {{{
+set backspace=indent,eol,start
 set cmdheight=1
+set colorcolumn=80
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=1
+set linespace=1
+set list
+set listchars=tab:>-,trail:$
+set nofoldenable
+set nojoinspaces
 set noshowcmd
 set noshowmode
-set nofoldenable
-
+set number
 set printoptions=paper:a4,syntax:n
-
-set laststatus=1
+set showmatch
+set smartcase
+set smarttab
 set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
-autocmd! InsertEnter * setlocal cursorline
-autocmd! InsertLeave * setlocal nocursorline
+set virtualedit=block
+set visualbell
+set wildignore=.exe
+" }}}
 
-set ignorecase
-set smartcase
-set incsearch
-set showmatch
-set hlsearch
-set tabstop=4
+" Formatting {{{
+set nowrap
+set autoindent
 set shiftwidth=4
 set expandtab
-set smarttab
-set autoindent
-set nojoinspaces
-set virtualedit=block
+set tabstop=4
+set softtabstop=4
+set textwidth=80
+" }}}
 
+" Mappings {{{
 let mapleader=","
 
 map Q gq
@@ -114,13 +122,19 @@ nnoremap <leader><space> :nohlsearch<cr>
 
 vnoremap < <gv
 vnoremap > >gv
+" }}}
 
-augroup dev
-autocmd!
+" Auto Commands {{{
+autocmd BufWritePost $MYVIMRC source %
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
 
 autocmd FileType html inoremap <buffer> < <><Esc>a<Left>
 
-autocmd FileType javascript,html,css,R inoremap <buffer> { {<cr>}<Esc>O<tab>
+autocmd FileType javascript,html,css,R inoremap <buffer> {<cr> {<cr>}<Esc>O<tab>
+autocmd FileType javascript,html,css,R inoremap <buffer> { {}<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> ( ()<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> [ []<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> " ""<Esc>a<Left>
@@ -150,14 +164,17 @@ autocmd BufRead,BufNewFile *.R setlocal filetype=R
 autocmd FileType javascript setlocal filetype=typescript
 autocmd FileType typescript let &l:commentstring='// %s'
 
-autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
-
 autocmd FileType qf nnoremap <buffer> <silent> q :bd<cr>
 
 autocmd QuickFixCmdPost *grep* cwindow
 
-augroup END
+autocmd InsertEnter * setlocal cursorline
+autocmd InsertLeave * setlocal nocursorline
 
+autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
+" }}}
+
+" Theme {{{
 set background=dark
 highlight clear
 syntax reset
@@ -183,7 +200,9 @@ highlight Statement guifg=Red gui=none
 highlight String guifg=#A5C261 gui=none
 highlight Title guifg=Orange gui=bold
 highlight Type guifg=LightRed gui=none
+" }}}
 
+" Util {{{
 " Display the syntax name under the cursor
 nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<cr>
 
@@ -204,4 +223,6 @@ function! s:RunShellCommand(cmdline)
     nnoremap <buffer> <silent> q :bd<CR>
     1
 endfunction
+" }}}
+
 
