@@ -155,9 +155,8 @@ autocmd FileType R
             \ nnoremap <buffer> <leader>r
                 \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
 
-autocmd BufRead,BufNewFile *.json setlocal filetype=javascript
-autocmd BufRead,BufNewFile *-js.mustache setlocal filetype=javascript
-autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript
+autocmd BufRead,BufNewFile *.json,*-js.mustache,*.ts
+            \ setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
