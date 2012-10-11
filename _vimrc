@@ -161,9 +161,6 @@ autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
-autocmd FileType javascript setlocal filetype=typescript
-autocmd FileType typescript let &l:commentstring='// %s'
-
 autocmd FileType qf nnoremap <buffer> <silent> q :bd<cr>
 
 autocmd QuickFixCmdPost *grep* cwindow
