@@ -28,6 +28,7 @@ set history=1000
 set modelines=3
 set nobackup
 set noswapfile
+set printoptions=paper:a4,syntax:n
 set undolevels=1000
 set viminfo+=%
 " }}}
@@ -46,6 +47,7 @@ if has('gui_running')
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
+
     set guifont=Lucida_Console
 
     set lines=51
@@ -69,7 +71,6 @@ set nojoinspaces
 set noshowcmd
 set noshowmode
 set number
-set printoptions=paper:a4,syntax:n
 set showmatch
 set smartcase
 set smarttab
@@ -220,5 +221,3 @@ function! s:RunShellCommand(cmdline)
     1
 endfunction
 " }}}
-
-
