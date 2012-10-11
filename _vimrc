@@ -19,7 +19,7 @@ syntax on
 syntax sync fromstart
 filetype plugin indent on
 
-let $MYVIMRC="~/vimfiles/_vimrc"
+let $MYVIMRC="$HOME/vimfiles/_vimrc"
 
 set autochdir
 set autoread
@@ -144,7 +144,7 @@ autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 autocmd FileType javascript setlocal nocindent
 
 autocmd FileType javascript,html
-            \ setlocal makeprg=node\ ~/vimfiles/jslint.js\ %
+            \ setlocal makeprg=node\ \"$HOME/vimfiles/jslint.js\"\ %
 autocmd FileType javascript,html setlocal efm=%f:%l:%m
 autocmd FileType javascript,html
             \ nnoremap <buffer> <leader>m
