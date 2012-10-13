@@ -1,7 +1,5 @@
-" Notes and modelines {{{
+" Modelines {{{
 " vim: set foldlevel=0 foldmethod=marker :
-"
-" C:\My\Programs\Vim\vim73\gvim.exe +bd -u %USERPROFILE%/vimfiles/_vimrc
 " }}}
 
 " Environment {{{
@@ -9,7 +7,7 @@ set nocompatible
 set encoding=utf-8
 " }}}
 
-" Setup Pathogen {{{
+" Pathogen {{{
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 " }}}
@@ -18,8 +16,6 @@ call pathogen#infect()
 syntax on
 syntax sync fromstart
 filetype plugin indent on
-
-let $MYVIMRC="$HOME/vimfiles/_vimrc"
 
 set autochdir
 set autoread
@@ -33,15 +29,8 @@ set undolevels=1000
 set viminfo+=%
 " }}}
 
-" Windows {{{
-if has('win32') || has('win64')
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif
-" }}}
-
 " GUI {{{
-if has('gui_running')
+if has('gui') && (has('win32') || has('win64'))
     winpos 25 100
 
     set guioptions-=m
@@ -52,6 +41,9 @@ if has('gui_running')
 
     set lines=51
     set columns=100
+
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
 endif
 " }}}
 
