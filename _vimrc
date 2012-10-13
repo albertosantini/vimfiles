@@ -126,7 +126,7 @@ vnoremap > >gv
 " }}}
 
 " Auto Commands {{{
-autocmd BufWritePost $MYVIMRC source %
+autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   execute "normal! g`\"" |
