@@ -29,24 +29,6 @@ set undolevels=1000
 set viminfo+=%
 " }}}
 
-" GUI {{{
-if has('gui') && (has('win32') || has('win64'))
-    winpos 25 100
-
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-
-    set guifont=Lucida_Console
-
-    set lines=51
-    set columns=100
-
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif
-" }}}
-
 " UI {{{
 set backspace=indent,eol,start
 set cmdheight=1
@@ -163,32 +145,48 @@ autocmd InsertLeave * setlocal nocursorline
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 " }}}
 
-" Theme {{{
-set background=dark
-highlight clear
-syntax reset
-highlight Normal guifg=White guibg=Black
-highlight ColorColumn guibg=#2D2D2D
-highlight Cursor guifg=Black guibg=Red
-highlight CursorLine guibg=black gui=undercurl
-highlight Search guibg=White
-highlight Boolean guifg=Yellow gui=none
-highlight Comment guifg=Grey gui=none
-highlight Conditional guifg=Magenta gui=none
-highlight Constant guifg=LightYellow gui=none
-highlight Float guifg=LightYellow gui=none
-highlight Function guifg=Orange gui=none
-highlight Identifier guifg=Red gui=none
-highlight Keyword guifg=Red gui=none
-highlight Label guifg=Orange gui=none
-highlight Number guifg=LightYellow gui=none
-highlight Operator guifg=LightBlue gui=none
-highlight Repeat guifg=Red gui=none
-highlight Special guifg=LightRed gui=none
-highlight Statement guifg=Red gui=none
-highlight String guifg=#A5C261 gui=none
-highlight Title guifg=Orange gui=bold
-highlight Type guifg=LightRed gui=none
+" GUI {{{
+if has('gui')
+    winpos 25 100
+
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+
+    set guifont=Lucida_Console
+
+    set lines=51
+    set columns=100
+
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+
+    set background=dark
+    highlight clear
+    syntax reset
+    highlight Normal guifg=White guibg=Black
+    highlight ColorColumn guibg=#2D2D2D
+    highlight Cursor guifg=Black guibg=Red
+    highlight CursorLine guibg=Black gui=undercurl
+    highlight Search guibg=White
+    highlight Boolean guifg=Yellow gui=none
+    highlight Comment guifg=DarkGrey gui=none
+    highlight Conditional guifg=Magenta gui=none
+    highlight Constant guifg=LightYellow gui=none
+    highlight Float guifg=LightYellow gui=none
+    highlight Function guifg=Orange gui=none
+    highlight Identifier guifg=Red gui=none
+    highlight Keyword guifg=Red gui=none
+    highlight Label guifg=Orange gui=none
+    highlight Number guifg=LightYellow gui=none
+    highlight Operator guifg=LightBlue gui=none
+    highlight Repeat guifg=Red gui=none
+    highlight Special guifg=LightRed gui=none
+    highlight Statement guifg=Red gui=none
+    highlight String guifg=#A5C261 gui=none
+    highlight Title guifg=Orange gui=bold
+    highlight Type guifg=LightRed gui=none
+endif
 " }}}
 
 " Util {{{
