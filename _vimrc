@@ -163,7 +163,6 @@ if has('gui')
 
     set background=dark
     highlight clear
-    syntax reset
     highlight Normal guifg=White guibg=Black
     highlight ColorColumn guibg=#2D2D2D
     highlight Cursor guifg=Black guibg=Red
