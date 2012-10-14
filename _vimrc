@@ -168,6 +168,7 @@ if has('gui')
     highlight Cursor guifg=Black guibg=Red
     highlight CursorLine guibg=Black gui=undercurl
     highlight Search guibg=White
+    highlight Title guifg=Orange gui=bold
     highlight Boolean guifg=Yellow gui=none
     highlight Comment guifg=DarkGrey gui=none
     highlight Conditional guifg=Magenta gui=none
@@ -183,7 +184,6 @@ if has('gui')
     highlight Special guifg=LightRed gui=none
     highlight Statement guifg=Red gui=none
     highlight String guifg=#A5C261 gui=none
-    highlight Title guifg=Orange gui=bold
     highlight Type guifg=LightRed gui=none
 endif
 " }}}
