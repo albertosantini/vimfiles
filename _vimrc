@@ -1,6 +1,4 @@
-" Modelines {{{
 " vim: set foldlevel=0 foldmethod=marker :
-" }}}
 
 " Environment {{{
 set nocompatible
@@ -21,7 +19,7 @@ set autochdir
 set autoread
 set hidden
 set history=1000
-set modelines=3
+set modelines=1
 set nobackup
 set noswapfile
 set printoptions=paper:a4,syntax:n
@@ -62,9 +60,10 @@ set nowrap
 set autoindent
 set shiftwidth=4
 set expandtab
+set paste
 set tabstop=4
-set softtabstop=4
 set textwidth=80
+set softtabstop=4
 " }}}
 
 " Mappings {{{
@@ -92,6 +91,7 @@ nmap <leader>e :e! $MYVIMRC<cr>
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk
+nnoremap gp `[v`]
 nnoremap <leader>l :ls<cr>
 nnoremap <leader><space> :nohlsearch<cr>
 
@@ -169,6 +169,7 @@ if has('gui')
     highlight CursorLine guibg=Black gui=undercurl
     highlight Search guibg=White
     highlight Title guifg=Orange gui=bold
+    highlight Visual guifg=Blue
     highlight Boolean guifg=Yellow gui=none
     highlight Comment guifg=DarkGrey gui=none
     highlight Conditional guifg=Magenta gui=none
