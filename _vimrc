@@ -61,9 +61,9 @@ set autoindent
 set shiftwidth=4
 set expandtab
 set paste
+set softtabstop=4
 set tabstop=4
 set textwidth=80
-set softtabstop=4
 " }}}
 
 " Mappings {{{
