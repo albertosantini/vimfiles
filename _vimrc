@@ -100,7 +100,7 @@ vnoremap > >gv
 " }}}
 
 " Auto Commands {{{
-augroup my
+augroup myautocmd
 autocmd!
 
 autocmd BufWritePost _vimrc source %
@@ -137,7 +137,6 @@ autocmd BufRead,BufNewFile *.json,*-js.mustache,*.ts
             \ setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
-
 
 autocmd QuickFixCmdPost *grep* cwindow
 
