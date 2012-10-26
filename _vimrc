@@ -100,6 +100,9 @@ vnoremap > >gv
 " }}}
 
 " Auto Commands {{{
+augroup my
+autocmd!
+
 autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -135,14 +138,16 @@ autocmd BufRead,BufNewFile *.json,*-js.mustache,*.ts
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
-autocmd FileType qf nnoremap <buffer> <silent> q :bd<cr>
 
 autocmd QuickFixCmdPost *grep* cwindow
 
 autocmd InsertEnter * setlocal cursorline
 autocmd InsertLeave * setlocal nocursorline
 
+autocmd BufRead * nnoremap <buffer> <silent> q :bd<cr>
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
+
+augroup end
 " }}}
 
 " GUI {{{
