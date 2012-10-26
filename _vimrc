@@ -60,7 +60,6 @@ set nowrap
 set autoindent
 set shiftwidth=4
 set expandtab
-set paste
 set softtabstop=4
 set tabstop=4
 set textwidth=80
@@ -143,7 +142,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 autocmd InsertEnter * setlocal cursorline
 autocmd InsertLeave * setlocal nocursorline
 
-autocmd BufRead * nnoremap <buffer> <silent> q :bd<cr>
+autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 
 augroup end
