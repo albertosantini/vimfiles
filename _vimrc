@@ -152,10 +152,7 @@ augroup end
 if has('gui')
     winpos 25 100
 
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-
+    set guioptions=
     set guifont=Lucida_Console
 
     set lines=51
