@@ -71,15 +71,6 @@ let mapleader=","
 map Q gq
 inoremap <C-U> <C-G>u<C-U>
 
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
 nmap <f4> :cw<cr>:cn<cr>
 nmap <s-f4> :cw<cr>:cp<cr>
 nmap <f5> :!start cmd /c %:p<cr>
