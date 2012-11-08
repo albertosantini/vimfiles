@@ -121,7 +121,7 @@ autocmd FileType javascript,html
 autocmd FileType R let &l:commentstring='# %s'
 autocmd FileType R
             \ nnoremap <buffer> <leader>r
-                \ :Shell c:/My/Programs/R/R-2.15.1/bin/i386/Rscript.exe %<cr>
+                \ :Shell c:/My/Programs/R/R-2.15.2/bin/i386/Rscript.exe %<cr>
 
 autocmd BufRead,BufNewFile *.json,*-js.mustache,*.ts
             \ setlocal filetype=javascript
