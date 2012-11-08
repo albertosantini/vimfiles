@@ -110,6 +110,7 @@ autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd FileType javascript setlocal nocindent
+autocmd FileType css setlocal indentexpr=
 
 autocmd FileType javascript,html
             \ setlocal makeprg=node\ \"$HOME/vimfiles/jslint.js\"\ %
