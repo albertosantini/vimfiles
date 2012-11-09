@@ -56,10 +56,11 @@ set wildignore=.exe
 " }}}
 
 " Formatting {{{
-set nowrap
 set autoindent
-set shiftwidth=4
 set expandtab
+set nowrap
+set shiftwidth=4
+set smartindent
 set softtabstop=4
 set tabstop=4
 set textwidth=80
@@ -101,7 +102,7 @@ autocmd BufReadPost *
 
 autocmd FileType html inoremap <buffer> < <><Esc>a<Left>
 
-autocmd FileType javascript,html,css,R inoremap <buffer> {<cr> {<cr>}<Esc>O<tab>
+autocmd FileType javascript,html,css,R inoremap <buffer> {<cr> {<cr>}<Esc>O
 autocmd FileType javascript,html,css,R inoremap <buffer> { {}<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> ( ()<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> [ []<Esc>a<Left>
@@ -110,7 +111,6 @@ autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd FileType javascript setlocal nocindent
-autocmd FileType css setlocal indentexpr=
 
 autocmd FileType javascript,html
             \ setlocal makeprg=node\ \"$HOME/vimfiles/jslint.js\"\ %
