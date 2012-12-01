@@ -35,7 +35,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=1
-set linespace=1
+set linespace=0
 set list
 set listchars=tab:>-,trail:$
 set nofoldenable
@@ -142,10 +142,10 @@ augroup end
 
 " GUI {{{
 if has('gui')
-    winpos 25 100
+    winpos 25 50
 
     set guioptions=
-    set guifont=Lucida_Console
+    set guifont=Source_Code_Pro:h9
 
     set lines=51
     set columns=100
