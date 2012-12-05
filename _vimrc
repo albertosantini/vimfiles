@@ -159,6 +159,7 @@ if has('gui')
     highlight ColorColumn guibg=#2D2D2D
     highlight Cursor guifg=Black guibg=Red
     highlight CursorLine guibg=Black gui=undercurl
+    highlight LineNr guifg=DarkGrey
     highlight Search guibg=White
     highlight Title guifg=Orange gui=bold
     highlight Visual guifg=Blue
