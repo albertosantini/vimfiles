@@ -12,7 +12,6 @@ call pathogen#infect()
 
 " General {{{
 syntax on
-syntax sync fromstart
 filetype plugin indent on
 
 set autochdir
@@ -93,6 +92,8 @@ vnoremap > >gv
 " Auto Commands {{{
 augroup myautocmd
 autocmd!
+
+autocmd BufEnter * :syntax sync fromstart
 
 autocmd BufWritePost _vimrc source %
 autocmd BufReadPost *
