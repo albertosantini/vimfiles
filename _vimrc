@@ -5,9 +5,9 @@ set nocompatible
 set encoding=utf-8
 " }}}
 
-" Pathogen {{{
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Runtime Path {{{
+set runtimepath+=$HOME/vimfiles/bundle/tcomment_vim
+set runtimepath+=$HOME/vimfiles/bundle/vim-surround
 " }}}
 
 " General {{{
