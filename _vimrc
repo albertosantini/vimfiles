@@ -22,6 +22,7 @@ set modelines=1
 set nobackup
 set noswapfile
 set printoptions=paper:a4,syntax:n
+set suffixesadd+=.js
 set undolevels=1000
 set viminfo+=%
 " }}}
