@@ -94,7 +94,7 @@ vnoremap > >gv
 augroup myautocmd
 autocmd!
 
-autocmd VimEnter * nested :keepalt bd
+" autocmd VimEnter * nested :keepalt bd
 autocmd BufEnter * :syntax sync fromstart
 
 autocmd BufWritePost _vimrc source %
