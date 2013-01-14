@@ -94,7 +94,7 @@ vnoremap > >gv
 augroup myautocmd
 autocmd!
 
-" autocmd VimEnter * nested :keepalt bd
+autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 autocmd BufEnter * :syntax sync fromstart
 
 autocmd BufWritePost _vimrc source %
