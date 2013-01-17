@@ -1,13 +1,15 @@
 " vim: set foldlevel=0 foldmethod=marker :
 
-" Environment {{{
+" My Environment {{{
 set nocompatible
 set encoding=utf-8
-" }}}
 
-" Runtime Path {{{
+let $PATH=$PATH . ";c:/My/Programs/R/R-2.15.2/bin/i386"
+
 set runtimepath+=$HOME/vimfiles/bundle/tcomment_vim
 set runtimepath+=$HOME/vimfiles/bundle/vim-surround
+
+runtime! bundle/**/plugin/*.vim
 " }}}
 
 " General {{{
@@ -77,7 +79,7 @@ nmap <s-f4> :cw<cr>:cp<cr>
 nmap <f5> :!start cmd /c %:p<cr>
 nmap <f6> :bn<cr>
 nmap <s-f6> :bp<cr>
-nmap <leader>e :e! $MYVIMRC<cr>
+nmap <leader>e :e! $HOME/vimfiles/plugin/_vimrc.vim<cr>
 
 nnoremap ; :
 nnoremap j gj
@@ -97,11 +99,15 @@ autocmd!
 autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 autocmd BufEnter * :syntax sync fromstart
 
-autocmd BufWritePost _vimrc source %
+autocmd InsertEnter * setlocal cursorline
+autocmd InsertLeave * setlocal nocursorline
+
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   execute "normal! g`\"" |
     \ endif
+autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
+autocmd BufWritePost _vimrc.vim source %
 
 autocmd FileType html inoremap <buffer> < <><Esc>a<Left>
 
@@ -114,7 +120,6 @@ autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd FileType javascript setlocal nocindent
-
 autocmd FileType javascript,html setlocal makeprg=jshint\ %
 autocmd FileType javascript,html setlocal efm=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 autocmd FileType javascript,html
@@ -122,22 +127,14 @@ autocmd FileType javascript,html
                 \ :silent make<cr>:cw<cr>:cc<cr>
 
 autocmd FileType R let &l:commentstring='# %s'
-autocmd FileType R
-            \ nnoremap <buffer> <leader>r
-                \ :Shell c:/My/Programs/R/R-2.15.2/bin/i386/Rscript.exe %<cr>
+autocmd FileType R nnoremap <buffer> <leader>r :Shell Rscript.exe %<cr>
 
-autocmd BufRead,BufNewFile *.json,*-js.mustache,*.ts
-            \ setlocal filetype=javascript
+autocmd BufRead,BufNewFile *.json,*-js.mustache setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
 autocmd QuickFixCmdPost *grep* cwindow
-
-autocmd InsertEnter * setlocal cursorline
-autocmd InsertLeave * setlocal nocursorline
-
 autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
-autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 
 augroup end
 " }}}
