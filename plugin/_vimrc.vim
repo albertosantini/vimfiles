@@ -6,8 +6,8 @@ set encoding=utf-8
 
 let $PATH=$PATH . ";c:/My/Programs/R/R-2.15.2/bin/i386"
 
-set runtimepath+=$HOME/vimfiles/bundle/tcomment_vim
-set runtimepath+=$HOME/vimfiles/bundle/vim-surround
+set runtimepath+=~/vimfiles/bundle/tcomment_vim
+set runtimepath+=~/vimfiles/bundle/vim-surround
 
 runtime! bundle/**/plugin/*.vim
 " }}}
@@ -79,7 +79,7 @@ nmap <s-f4> :cw<cr>:cp<cr>
 nmap <f5> :!start cmd /c %:p<cr>
 nmap <f6> :bn<cr>
 nmap <s-f6> :bp<cr>
-nmap <leader>e :e! $HOME/vimfiles/plugin/_vimrc.vim<cr>
+nmap <leader>e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
 
 nnoremap ; :
 nnoremap j gj
