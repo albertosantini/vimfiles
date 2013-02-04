@@ -130,7 +130,7 @@ autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
 autocmd QuickFixCmdPost *grep* cwindow
-autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
+autocmd FileType qf,help,scratch nnoremap <buffer> <silent> q :bd<cr>
 
 augroup end
 " }}}
@@ -191,10 +191,9 @@ function! s:RunShellCommand(cmdline)
         endif
     endfor
     botright new
-    setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+    setlocal filetype=scratch buftype=nofile bufhidden=wipe nobuflisted
     execute '$read !'. exp_cmdline
     setlocal nomodifiable
-    nnoremap <buffer> <silent> q :bd<CR>
     1
 endfunction
 " }}}
