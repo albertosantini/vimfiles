@@ -116,21 +116,23 @@ autocmd FileType javascript,html,R inoremap <buffer> ' ''<Esc>a<Left>
 autocmd FileType javascript,html,R inoremap <buffer> <C-Tab> <Esc><Right>a
 
 autocmd FileType javascript setlocal nocindent
-autocmd FileType javascript,html setlocal makeprg=jshint\ %
-autocmd FileType javascript,html setlocal efm=%f:\ line\ %l\\,\ col\ %c\\,\ %m
-autocmd FileType javascript,html
-            \ nnoremap <buffer> <leader>m
+autocmd FileType javascript setlocal makeprg=jshint\ %
+autocmd FileType javascript setlocal efm=%f:\ line\ %l\\,\ col\ %c\\,\ %m
+autocmd FileType javascript nnoremap <buffer> <leader>m
                 \ :silent make<cr>:cw<cr>:cc<cr>
 
 autocmd FileType R let &l:commentstring='# %s'
-autocmd FileType R nnoremap <buffer> <leader>r :Shell Rscript.exe %<cr>
+autocmd FileType R setlocal makeprg=Rscript.exe\ %
+autocmd FileType R setlocal efm=%A,%C,%Z
+autocmd FileType R nnoremap <buffer> <leader>m
+                \ :silent make<cr>:copen 21<cr>
 
 autocmd BufRead,BufNewFile *.json,*-js.mustache setlocal filetype=javascript
 autocmd BufRead,BufNewFile *-html.mustache setlocal filetype=html
 autocmd BufRead,BufNewFile *.R setlocal filetype=R
 
 autocmd QuickFixCmdPost *grep* cwindow
-autocmd FileType qf,help,scratch nnoremap <buffer> <silent> q :bd<cr>
+autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
 
 augroup end
 " }}}
@@ -179,21 +181,4 @@ endif
 " Util {{{
 " Display the syntax name under the cursor
 nmap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<cr>
-
-" Display output of shell commands in new window
-command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
-function! s:RunShellCommand(cmdline)
-    let exp_cmdline = a:cmdline
-    for part in split(a:cmdline, ' ')
-        if part[0] =~ '\v[%#<]'
-            let exp_part = fnameescape(expand(part))
-            let exp_cmdline = substitute(exp_cmdline, part, exp_part, '')
-        endif
-    endfor
-    botright new
-    setlocal filetype=scratch buftype=nofile bufhidden=wipe nobuflisted
-    execute '$read !'. exp_cmdline
-    setlocal nomodifiable
-    1
-endfunction
 " }}}
