@@ -1,4 +1,3 @@
-" My Environment
 set nocompatible
 set encoding=utf-8
 
@@ -9,25 +8,18 @@ runtime! bundle/**/plugin/*.vim
 
 let mapleader=","
 
-" General
 syntax on
 filetype plugin indent on
 
 set autochdir
+set autoindent
 set autoread
-set hidden
-set history=100
-set modelines=1
-set nobackup
-set noswapfile
-set suffixesadd+=.js
-set undolevels=1000
-set viminfo+=%
-
-" UI
 set backspace=indent,eol,start
 set cmdheight=1
 set colorcolumn=80
+set expandtab
+set hidden
+set history=100
 set hlsearch
 set ignorecase
 set incsearch
@@ -35,33 +27,34 @@ set laststatus=1
 set linespace=0
 set list
 set listchars=tab:>-,trail:$
+set modelines=1
+set nobackup
 set nofoldenable
 set nojoinspaces
+set noswapfile
 set noshowcmd
 set noshowmode
+set nowrap
 set number
+set shiftwidth=4
 set showmatch
 set smartcase
+set smartindent
 set smarttab
+set softtabstop=4
 set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
+set suffixesadd+=.js
+set tabstop=4
+set textwidth=80
+set undolevels=1000
 set virtualedit=block
+set viminfo+=%
 set visualbell
 set wildignore=.exe
 
-" Formatting
-set autoindent
-set expandtab
-set nowrap
-set shiftwidth=4
-set smartindent
-set softtabstop=4
-set tabstop=4
-set textwidth=80
-
-" Mappings
 map Q gq
 inoremap <C-U> <C-G>u<C-U>
 
@@ -80,7 +73,6 @@ nnoremap <leader><space> :nohlsearch<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-" Auto Commands
 augroup myautocmd
 autocmd!
 
@@ -93,7 +85,6 @@ autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
 
 augroup end
 
-" GUI
 if has('gui_running')
     colorscheme as
 endif
