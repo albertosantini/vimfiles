@@ -11,6 +11,8 @@ let mapleader=","
 syntax on
 filetype plugin indent on
 
+if has('gui_running') | colorscheme as | endif
+
 set autochdir
 set autoindent
 set autoread
@@ -55,36 +57,25 @@ set viminfo+=%
 set visualbell
 set wildignore=.exe
 
-map Q gq
-inoremap <C-U> <C-G>u<C-U>
-
-nmap <f4> :cw<cr>:cn<cr>
-nmap <s-f4> :cw<cr>:cp<cr>
-nmap <f5> :!start cmd /c %:p<cr>
-nmap <f6> :bn<cr>
-nmap <s-f6> :bp<cr>
-nmap <leader>e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
-
 nnoremap ; :
 nnoremap gp `[v`]
+nnoremap <f4> :cw<cr>:cn<cr>
+nnoremap <s-f4> :cw<cr>:cp<cr>
+nnoremap <f5> :!start cmd /c %:p<cr>
+nnoremap <f6> :bn<cr>
+nnoremap <s-f6> :bp<cr>
+nnoremap <leader>e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
 nnoremap <leader>l :ls<cr>
 nnoremap <leader><space> :nohlsearch<cr>
-
 vnoremap < <gv
 vnoremap > >gv
 
 augroup myautocmd
 autocmd!
-
 autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 autocmd BufWritePost _vimrc.vim source %
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
-
 augroup end
-
-if has('gui_running')
-    colorscheme as
-endif
