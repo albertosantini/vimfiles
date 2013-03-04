@@ -48,7 +48,6 @@ set statusline=
 set statusline+=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
-set suffixesadd+=.js
 set tabstop=4
 set textwidth=80
 set undolevels=1000

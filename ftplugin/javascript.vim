@@ -1,3 +1,5 @@
+setlocal suffixesadd=.js
+
 compiler javascript
 nnoremap <buffer> <leader>m :silent make<cr>:cw<cr>:cc<cr>
 
