@@ -6,7 +6,7 @@ set runtimepath+=~/vimfiles/bundle/vim-surround
 
 runtime! bundle/**/plugin/*.vim
 
-let mapleader=","
+let mapleader=','
 
 syntax on
 filetype plugin indent on
@@ -29,13 +29,11 @@ set laststatus=1
 set linespace=0
 set list
 set listchars=tab:>-,trail:$
-set modelines=1
+set nomodeline
 set nobackup
 set nofoldenable
 set nojoinspaces
 set noswapfile
-set noshowcmd
-set noshowmode
 set nowrap
 set number
 set shiftwidth=4
@@ -44,8 +42,7 @@ set smartcase
 set smartindent
 set smarttab
 set softtabstop=4
-set statusline=
-set statusline+=%<%f\ %h%m%r%w\ %y:b%n
+set statusline=%<%f\ %h%m%r%w\ %y:b%n
 set statusline+=%=
 set statusline+=%-14.(%l,%c%V%)\ %P
 set tabstop=4
