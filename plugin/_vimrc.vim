@@ -31,7 +31,6 @@ set list
 set listchars=tab:>-,trail:$
 set nomodeline
 set nobackup
-set nofoldenable
 set nojoinspaces
 set noswapfile
 set nowrap
