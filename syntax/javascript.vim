@@ -36,7 +36,7 @@ hi link shebang Comment
 syn keyword javaScriptCommentTodo      TODO FIXME XXX TBD contained
 syn match   javaScriptLineComment      "\/\/.*" contains=@Spell,javaScriptCommentTodo
 syn match   javaScriptCommentSkip      "^[ \t]*\*\($\|[ \t]\+\)"
-syn region  javaScriptComment	       start="/\*"  end="\*/" contains=@Spell,javaScriptCommentTodo
+syn region  javaScriptComment          start="/\*"  end="\*/" contains=@Spell,javaScriptCommentTodo
 "}}}
 "" JSDoc support start"{{{
 if !exists("javascript_ignore_javaScriptdoc")
@@ -57,12 +57,12 @@ endif   "" JSDoc end
 syntax case match
 
 "" Syntax in the JavaScript code"{{{
-syn match   javaScriptSpecial	       "\\\d\d\d\|\\."
-syn region  javaScriptStringD	       start=+"+  skip=+\\\\\|\\"+  end=+"\|$+	contains=javaScriptSpecial,@htmlPreproc
-syn region  javaScriptStringS	       start=+'+  skip=+\\\\\|\\'+  end=+'\|$+	contains=javaScriptSpecial,@htmlPreproc
+syn match   javaScriptSpecial          "\\\d\d\d\|\\."
+syn region  javaScriptStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javaScriptSpecial,@htmlPreproc
+syn region  javaScriptStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=javaScriptSpecial,@htmlPreproc
 
 syn match   javaScriptSpecialCharacter "'\\.'"
-syn match   javaScriptNumber	       "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
+syn match   javaScriptNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syn region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gi]\{0,2\}\s*$+ end=+/[gi]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
 " syntax match   javaScriptSpecial        "\\\d\d\d\|\\x\x\{2\}\|\\u\x\{4\}\|\\."
 " syntax region  javaScriptStringD        start=+"+  skip=+\\\\\|\\$"+  end=+"+  contains=javaScriptSpecial,@htmlPreproc
@@ -102,7 +102,7 @@ syntax keyword javaScriptIdentifier     arguments this let var void yield
 syntax keyword javaScriptOperator       delete new instanceof typeof
 syntax keyword javaScriptBoolean        true false
 syntax keyword javaScriptNull           null undefined
-syntax keyword javaScriptMessage		alert confirm prompt status
+syntax keyword javaScriptMessage        alert confirm prompt status
 syntax keyword javaScriptGlobal         self top parent
 syntax keyword javaScriptDeprecated     escape unescape all applets alinkColor bgColor fgColor linkColor vlinkColor xmlEncoding
 "}}}
@@ -143,7 +143,7 @@ if exists("javascript_enable_domhtmlcss")
     " DOM2 things"{{{
     syntax match javaScriptDomElemAttrs     contained /\%(nodeName\|nodeValue\|nodeType\|parentNode\|childNodes\|firstChild\|lastChild\|previousSibling\|nextSibling\|attributes\|ownerDocument\|namespaceURI\|prefix\|localName\|tagName\)\>/
     syntax match javaScriptDomElemFuncs     contained /\%(insertBefore\|replaceChild\|removeChild\|appendChild\|hasChildNodes\|cloneNode\|normalize\|isSupported\|hasAttributes\|getAttribute\|setAttribute\|removeAttribute\|getAttributeNode\|setAttributeNode\|removeAttributeNode\|getElementsByTagName\|getAttributeNS\|setAttributeNS\|removeAttributeNS\|getAttributeNodeNS\|setAttributeNodeNS\|getElementsByTagNameNS\|hasAttribute\|hasAttributeNS\)\>/ nextgroup=javaScriptParen skipwhite
-	"}}}
+    "}}}
     " HTML things"{{{
     syntax match javaScriptHtmlElemAttrs    contained /\%(className\|clientHeight\|clientLeft\|clientTop\|clientWidth\|dir\|id\|innerHTML\|lang\|length\|offsetHeight\|offsetLeft\|offsetParent\|offsetTop\|offsetWidth\|scrollHeight\|scrollLeft\|scrollTop\|scrollWidth\|style\|tabIndex\|title\)\>/
     syntax match javaScriptHtmlElemFuncs    contained /\%(blur\|click\|focus\|scrollIntoView\|addEventListener\|dispatchEvent\|removeEventListener\|item\)\>/ nextgroup=javaScriptParen skipwhite
@@ -185,20 +185,20 @@ syntax match  javaScriptFuncArg "\(([^()]*)\)" contains=javaScriptParens,javaScr
 syntax match  javaScriptFuncComma /,/ contained
 " syntax region  javaScriptFuncBlock      contained matchgroup=javaScriptFuncBlock start="{" end="}" contains=@javaScriptAll,javaScriptParensErrA,javaScriptParensErrB,javaScriptParen,javaScriptBracket,javaScriptBlock fold
 
-syn match	javaScriptBraces	   "[{}\[\]]"
-syn match	javaScriptParens	   "[()]"
-syn match	javaScriptOpSymbols	   "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-="
+syn match   javaScriptBraces       "[{}\[\]]"
+syn match   javaScriptParens       "[()]"
+syn match   javaScriptOpSymbols    "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-="
 syn match   javaScriptEndColons    "[;,]"
 syn match   javaScriptLogicSymbols "\(&&\)\|\(||\)"
 
 " JavaScriptFold Function {{{
 
 function! JavaScriptFold()
-	setl foldmethod=syntax
-	setl foldlevelstart=1
-	syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+    setl foldmethod=manual
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 
-	setl foldtext=FoldText()
+    setl foldtext=FoldText()
 endfunction
 
 au FileType javascript call JavaScriptFold()
@@ -219,8 +219,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptEndColons             Exception
   HiLink javaScriptOpSymbols             Operator
   HiLink javaScriptLogicSymbols         Boolean
-  HiLink javaScriptBraces	        	Function
-  HiLink javaScriptParens	        	Operator
+  HiLink javaScriptBraces               Function
+  HiLink javaScriptParens               Operator
   HiLink javaScriptComment              Comment
   HiLink javaScriptLineComment          Comment
   HiLink javaScriptDocComment           Comment
@@ -272,27 +272,27 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptCssStyles            Label
 
   " Ajax Highlighting
-	HiLink javaScriptBrowserObjects     Constant
+    HiLink javaScriptBrowserObjects     Constant
 
-	HiLink javaScriptDOMObjects         Constant
-	HiLink javaScriptDOMMethods         Exception
-	HiLink javaScriptDOMProperties      Type
+    HiLink javaScriptDOMObjects         Constant
+    HiLink javaScriptDOMMethods         Exception
+    HiLink javaScriptDOMProperties      Type
 
-	HiLink javaScriptAjaxObjects        htmlH1
-	HiLink javaScriptAjaxMethods        Exception
-	HiLink javaScriptAjaxProperties     Type
+    HiLink javaScriptAjaxObjects        htmlH1
+    HiLink javaScriptAjaxMethods        Exception
+    HiLink javaScriptAjaxProperties     Type
 
-	HiLink javaScriptFuncDef            Title
+    HiLink javaScriptFuncDef            Title
     HiLink javaScriptFuncArg            Special
     HiLink javaScriptFuncComma          Operator
 
-	HiLink javaScriptHtmlEvents         Special
-	HiLink javaScriptHtmlElemProperties Type
+    HiLink javaScriptHtmlEvents         Special
+    HiLink javaScriptHtmlElemProperties Type
 
-	HiLink javaScriptEventListenerKeywords Keyword
+    HiLink javaScriptEventListenerKeywords Keyword
 
-	HiLink javaScriptNumber            Number
-	HiLink javaScriptPropietaryObjects Constant
+    HiLink javaScriptNumber            Number
+    HiLink javaScriptPropietaryObjects Constant
 
   delcommand HiLink
 endif
