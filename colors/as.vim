@@ -6,6 +6,8 @@ set guifont=Source_Code_Pro:h9
 set lines=51
 set columns=100
 
+set nomousehide
+
 source $VIMRUNTIME/mswin.vim
 
 set background=dark

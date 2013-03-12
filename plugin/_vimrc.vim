@@ -16,7 +16,6 @@ if has('gui_running') | colorscheme as | endif
 set autochdir
 set autoindent
 set autoread
-set backspace=indent,eol,start
 set cmdheight=1
 set colorcolumn=80
 set expandtab
