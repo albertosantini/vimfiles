@@ -51,7 +51,6 @@ set viminfo+=%
 set visualbell
 set wildignore=.exe
 
-nnoremap ; :
 nnoremap gp `[v`]
 nnoremap <f4> :cw<cr>:cn<cr>
 nnoremap <s-f4> :cw<cr>:cp<cr>
