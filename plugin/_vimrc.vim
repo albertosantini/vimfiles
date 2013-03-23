@@ -6,8 +6,6 @@ set runtimepath+=~/vimfiles/bundle/vim-surround
 
 runtime! bundle/**/plugin/*.vim
 
-let mapleader=','
-
 syntax on
 filetype plugin indent on
 
@@ -34,6 +32,7 @@ set nojoinspaces
 set noswapfile
 set nowrap
 set number
+set scrolloff=3
 set shiftwidth=4
 set showmatch
 set smartcase
