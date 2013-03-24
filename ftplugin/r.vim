@@ -1,5 +1,5 @@
 compiler r
-nnoremap <buffer> <leader>m :silent make<cr>:copen 21<cr>
+nnoremap <buffer> <f8> :silent make<cr>:copen 21<cr>
 
 inoremap <buffer> {<cr> {<cr>}<Esc>O
 inoremap <buffer> { {}<Esc>a<Left>

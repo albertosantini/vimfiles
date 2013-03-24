@@ -51,16 +51,16 @@ set visualbell
 set wildignore=.exe
 
 nnoremap gp `[v`]
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <f2> :ls<cr>
 nnoremap <f4> :cw<cr>:cn<cr>
 nnoremap <s-f4> :cw<cr>:cp<cr>
 nnoremap <f5> :!start cmd /c %:p<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <s-f6> :bp<cr>
-nnoremap <leader>e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
-nnoremap <leader>l :ls<cr>
-nnoremap <leader><space> :nohlsearch<cr>
-vnoremap < <gv
-vnoremap > >gv
+nnoremap <f9> :nohlsearch<cr>
+nnoremap <f10> e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
 
 augroup myautocmd
 autocmd!
