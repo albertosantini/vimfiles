@@ -39,3 +39,6 @@ highlight Type guifg=LightRed gui=none
 
 highlight Pmenu guifg=Black guibg=LightGrey
 highlight PmenuSel guifg=Red guibg=White
+
+highlight OverLength guibg=grey30
+match OverLength /\%80v.*
