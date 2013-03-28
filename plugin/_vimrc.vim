@@ -15,7 +15,6 @@ set autochdir
 set autoindent
 set autoread
 set cmdheight=1
-set colorcolumn=80
 set expandtab
 set hidden
 set history=100

@@ -13,7 +13,6 @@ source $VIMRUNTIME/mswin.vim
 set background=dark
 highlight clear
 highlight Normal guifg=White guibg=Black
-highlight ColorColumn guibg=#2D2D2D
 highlight Cursor guifg=Black guibg=Red
 highlight LineNr guifg=DarkGrey
 highlight Search guibg=White
