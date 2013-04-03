@@ -22,7 +22,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=1
-set linespace=0
 set list
 set listchars=tab:>-,trail:$
 set nomodeline
