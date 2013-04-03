@@ -1,4 +1,4 @@
-winpos 25 50
+winpos 25 25
 
 set guioptions=
 set guifont=Source_Code_Pro:h9
@@ -12,6 +12,7 @@ source $VIMRUNTIME/mswin.vim
 
 set background=dark
 highlight clear
+
 highlight Normal guifg=White guibg=Black
 highlight Cursor guifg=Black guibg=Red
 highlight LineNr guifg=DarkGrey
