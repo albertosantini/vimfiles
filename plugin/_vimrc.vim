@@ -51,7 +51,7 @@ nnoremap <f5> :!start cmd /c %:p<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <s-f6> :bp<cr>
 nnoremap <f9> :nohlsearch<cr>
-nnoremap <f10> e :e! ~/vimfiles/plugin/_vimrc.vim<cr>
+nnoremap <f10> :e! ~/vimfiles/plugin/_vimrc.vim<cr>
 nnoremap gp `[v`]
 vnoremap < <gv
 vnoremap > >gv
