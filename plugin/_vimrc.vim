@@ -40,7 +40,6 @@ set undolevels=1000
 set virtualedit=block
 set viminfo+=%
 set visualbell
-set wildignore=.exe
 
 nnoremap <f2> :ls<cr>
 nnoremap <f4> :cw<cr>:cn<cr>
