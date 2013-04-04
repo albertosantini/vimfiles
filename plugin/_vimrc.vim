@@ -14,7 +14,6 @@ if has('gui_running') | colorscheme as | endif
 set autochdir
 set autoindent
 set autoread
-set cmdheight=1
 set expandtab
 set hidden
 set history=100
