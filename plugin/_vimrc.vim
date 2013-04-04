@@ -20,7 +20,6 @@ set history=100
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=1
 set list
 set listchars=tab:>-,trail:$
 set nomodeline
