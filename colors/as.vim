@@ -10,6 +10,8 @@ set nomousehide
 
 source $VIMRUNTIME/mswin.vim
 
+noremap <2-LeftMouse> *
+
 set background=dark
 highlight clear
 
