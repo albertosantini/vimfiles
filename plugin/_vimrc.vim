@@ -56,7 +56,6 @@ autocmd!
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 autocmd BufWritePost _vimrc.vim source %
-autocmd FileType qf,help nnoremap <buffer> <silent> q :bd<cr>
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 augroup end
