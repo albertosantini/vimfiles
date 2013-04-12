@@ -16,7 +16,6 @@ set autoindent
 set autoread
 set expandtab
 set hidden
-set history=100
 set hlsearch
 set ignorecase
 set incsearch
@@ -36,7 +35,6 @@ set smartindent
 set smarttab
 set softtabstop=4
 set tabstop=4
-set undolevels=1000
 set virtualedit=block
 set viminfo+=%
 set visualbell
