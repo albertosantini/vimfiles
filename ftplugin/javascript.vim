@@ -1,7 +1,9 @@
 setlocal suffixesadd=.js
 
 compiler javascript
-nnoremap <buffer> <f8> :silent make<cr>:cw<cr>:cc<cr>
+
+autocmd BufWritePost <buffer> silent make
+autocmd QuickFixCmdPost <buffer> nested cwindow
 
 inoremap <buffer> {<cr> {<cr>}<Esc>O
 inoremap <buffer> { {}<Esc>a<Left>
