@@ -21,9 +21,9 @@ set ignorecase
 set incsearch
 set list
 set listchars=tab:>-,trail:$
-set nomodeline
 set nobackup
 set nojoinspaces
+set nomodeline
 set noswapfile
 set nowrap
 set number
@@ -35,8 +35,8 @@ set smartindent
 set smarttab
 set softtabstop=4
 set tabstop=4
-set virtualedit=block
 set viminfo+=%
+set virtualedit=block
 set visualbell
 
 nnoremap <f2> :ls<cr>
