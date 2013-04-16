@@ -1,3 +1,5 @@
+autocmd BufWinEnter,WinEnter <buffer> match ErrorMsg '\%>80v.\+'
+
 inoremap <buffer> < <><Esc>a<Left>
 inoremap <buffer> {<cr> {<cr>}<Esc>O
 inoremap <buffer> { {}<Esc>a<Left>
