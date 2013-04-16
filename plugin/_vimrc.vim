@@ -53,7 +53,6 @@ vnoremap > >gv
 
 augroup myautocmd
 autocmd!
-autocmd BufEnter * :syntax sync fromstart
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 autocmd BufWritePost _vimrc.vim source %
 autocmd QuickFixCmdPost *grep* cwindow
