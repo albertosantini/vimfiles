@@ -9,7 +9,7 @@ runtime! bundle/**/plugin/*.vim
 syntax on
 filetype plugin indent on
 
-if has('gui_running') | colorscheme as | endif
+colorscheme as
 
 set autochdir
 set autoindent

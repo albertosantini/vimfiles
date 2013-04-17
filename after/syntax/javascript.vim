@@ -1,3 +1,7 @@
+if !exists("b:current_syntax")
+    finish
+endif
+
 syntax clear javaScriptFunction
 
 syntax keyword javaScriptFuncKeyword function contained

@@ -1,17 +1,3 @@
-winpos 25 25
-
-set guioptions=
-set guifont=Source_Code_Pro:h9
-
-set lines=51
-set columns=100
-
-set nomousehide
-
-source $VIMRUNTIME/mswin.vim
-
-noremap <2-LeftMouse> *
-
 set background=dark
 highlight clear
 
