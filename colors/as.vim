@@ -15,7 +15,7 @@ highlight Constant guifg=LightYellow gui=none
 highlight Float guifg=LightYellow gui=none
 highlight Function guifg=Orange gui=none
 highlight Identifier guifg=Red gui=none
-highlight Keyword guifg=Red gui=none ctermfg=Red
+highlight Keyword guifg=Red gui=none
 highlight Label guifg=Orange gui=none
 highlight Number guifg=LightYellow gui=none
 highlight Operator guifg=LightBlue gui=none

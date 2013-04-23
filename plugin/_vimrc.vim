@@ -9,8 +9,6 @@ runtime! bundle/**/plugin/*.vim
 syntax on
 filetype plugin indent on
 
-colorscheme as
-
 set autochdir
 set autoindent
 set autoread
