@@ -50,6 +50,5 @@ vnoremap > >gv
 augroup myautocmd
 autocmd!
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
-autocmd QuickFixCmdPost *grep* cwindow
 autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 augroup end
