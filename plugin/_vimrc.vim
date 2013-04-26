@@ -17,8 +17,7 @@ set hidden
 set hlsearch
 set ignorecase
 set incsearch
-set list
-set listchars=tab:>-,trail:$
+set list listchars=tab:>-,trail:$
 set nobackup
 set nojoinspaces
 set nomodeline
