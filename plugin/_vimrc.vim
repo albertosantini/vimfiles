@@ -47,8 +47,5 @@ nnoremap gp `[v`]
 vnoremap < <gv
 vnoremap > >gv
 
-augroup myautocmd
-autocmd!
-autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
-autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
-augroup end
+autocmd! BufWrite * if ! &bin | :%s/\s\+$//ge | endif
+autocmd! VimEnter * nested if empty(expand('%')) | keepalt bd | endif
