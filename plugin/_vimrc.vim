@@ -40,10 +40,8 @@ set visualbell
 nnoremap <f2> :ls<cr>
 nnoremap <f4> :cw<cr>:cn<cr>
 nnoremap <s-f4> :cw<cr>:cp<cr>
-nnoremap <f5> :!start cmd /c %:p<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <s-f6> :bp<cr>
-nnoremap <f10> :e! ~/vimfiles/plugin/_vimrc.vim<cr>
 nnoremap <esc> :nohlsearch<cr><esc>
 nnoremap gp `[v`]
 vnoremap < <gv
@@ -52,7 +50,6 @@ vnoremap > >gv
 augroup myautocmd
 autocmd!
 autocmd BufWrite * if ! &bin | :%s/\s\+$//ge | endif
-autocmd BufWritePost _vimrc.vim source %
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd VimEnter * nested if empty(expand('%')) | keepalt bd | endif
 augroup end
