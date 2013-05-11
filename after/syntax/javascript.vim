@@ -18,15 +18,12 @@ syntax match javaScriptNumber "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syntax match javaScriptOpSymbols
                 \ "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-="
 
-syntax match javaScriptLineOverflow "\%>80v.\+" containedin=ALL
-
 highlight link javaScriptEndColons Exception
 highlight link javaScriptFuncArg Special
 highlight link javaScriptFuncComma Operator
 highlight link javaScriptFuncDef Title
 highlight link javaScriptFuncKeyword Function
 highlight link javaScriptLabel Label
-highlight link javaScriptLineOverflow ErrorMsg
 highlight link javaScriptLogicSymbols Boolean
 highlight link javaScriptNumber Number
 highlight link javaScriptOpSymbols Operator
