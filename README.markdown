@@ -21,7 +21,6 @@ The other standard vim folders contain the configuration for my programming
 needs about color theme, indentation, compiler settings and brackets completion:
 
 - [JavaScript](http://nodejs.org/)
-
 - [R](http://www.r-project.org/)
 
 Note
