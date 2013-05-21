@@ -13,10 +13,9 @@ I prefer to minimize the plugin footprint. In the bundle folder there are the
 following plugins, configured as submodules to update them easily.
 
 - [surround](https://github.com/tpope/vim-surround)
-
 - [tComment](https://github.com/tomtom/tcomment_vim)
-
 - [tern_for_vim](https://github.com/marijnh/tern_for_vim)
+- [ultisnips](https://github.com/SirVer/ultisnips)
 
 The other standard vim folders contain the configuration for my programming
 needs about color theme, indentation, compiler settings and brackets completion:
