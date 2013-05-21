@@ -1,12 +1,7 @@
 set nocompatible
 set encoding=utf-8
 
-set runtimepath+=~/vimfiles/bundle/tcomment_vim
-set runtimepath+=~/vimfiles/bundle/tern_for_vim
-set runtimepath+=~/vimfiles/bundle/tern_for_vim/after
-set runtimepath+=~/vimfiles/bundle/vim-surround
-
-runtime! bundle/**/plugin/*.vim
+runtime bundle/bundle.vim
 
 syntax on
 filetype plugin indent on
