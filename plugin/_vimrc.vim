@@ -1,8 +1,6 @@
 set nocompatible
 set encoding=utf-8
 
-runtime bundle/bundle.vim
-
 syntax on
 filetype plugin indent on
 
