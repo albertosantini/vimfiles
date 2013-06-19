@@ -6,17 +6,13 @@ This repository contains the configuration of my preferred editor:
 
 I have been using the official binaries (7.3.46) on Windows 7 64 bit.
 
-The user vimrc file, `_vimrc`, is contained in the plugin folder: so I do not
-need to link that file to the user home folder.
+The user vimrc file, `_vimrc`, is contained in the `plugin` folder as
+`vimrc.vim`: so I do not need to link that file to the user home folder.
 
-I prefer to minimize the plugin footprint. In the bundle folder there are the
-following plugins, configured as submodules to update them easily.
+I don't use any plugin.
 
-- [surround](https://github.com/tpope/vim-surround)
-- [tComment](https://github.com/tomtom/tcomment_vim)
-
-The other standard vim folders contain the configuration for my programming
-needs about color theme, indentation, compiler settings and brackets completion:
+The standard vim folders contain the configuration for my programming needs
+about color theme, indentation, compiler settings and so on:
 
 - [JavaScript](http://nodejs.org/)
 - [R](http://www.r-project.org/)
