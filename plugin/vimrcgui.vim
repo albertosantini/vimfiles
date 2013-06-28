@@ -6,7 +6,7 @@ colorscheme as
 
 winpos 25 25
 
-set guifont=Lucida\ Console:h11
+set guifont=Consolas:h10
 set guioptions=
 set lines=49
 
