@@ -7,7 +7,6 @@ filetype plugin indent on
 set autochdir
 set autoindent
 set autoread
-set colorcolumn=80
 set expandtab
 set hidden
 set hlsearch

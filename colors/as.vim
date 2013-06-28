@@ -3,7 +3,6 @@ highlight clear
 
 highlight Normal guifg=White guibg=Black
 highlight Cursor guifg=Black guibg=Red
-highlight ColorColumn guibg=grey10
 highlight LineNr guifg=DarkGrey
 highlight Search guibg=White
 highlight Title guifg=Orange gui=bold
