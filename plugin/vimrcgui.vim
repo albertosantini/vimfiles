@@ -10,8 +10,5 @@ set columns=100
 
 set guioptions=
 set lines=51
-set nomousehide
 
 source $VIMRUNTIME/mswin.vim
-
-noremap <2-LeftMouse> *
