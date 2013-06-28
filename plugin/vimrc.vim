@@ -18,7 +18,6 @@ set nojoinspaces
 set nomodeline
 set noswapfile
 set nowrap
-set number
 set scrolloff=3
 set shiftwidth=4
 set showmatch
