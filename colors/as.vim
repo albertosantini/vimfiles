@@ -1,7 +1,7 @@
 set background=dark
 highlight clear
 
-highlight Normal guifg=White guibg=Black
+highlight Normal guifg=White guibg=#2B2B2B
 highlight Cursor guifg=Black guibg=Red
 highlight LineNr guifg=DarkGrey
 highlight Search guibg=White
