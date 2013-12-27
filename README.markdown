@@ -29,7 +29,6 @@ Plugins in the radar:
 - [unite](https://github.com/Shougo/unite.vim)
 - [vim-airline](https://github.com/bling/vim-airline)
 - [vim-multiple-cursor](https://github.com/terryma/vim-multiple-cursors)
-- [vim-shell](https://github.com/Shougo/vimshell.vim)
 - [vundle](https://github.com/gmarik/vundle)
 
 Note
