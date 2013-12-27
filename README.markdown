@@ -17,6 +17,21 @@ about color theme, indentation, compiler settings and so on:
 - [JavaScript](http://nodejs.org/)
 - [R](http://www.r-project.org/)
 
+
+Plugins in the radar:
+
+- [easymotion](https://github.com/Lokaltog/vim-easymotion)
+- [fugitive](https://github.com/tpope/vim-fugitive)
+- [delimitMate](https://github.com/Raimondi/delimitMate)
+- [numbers](https://github.com/myusuf3/numbers.vim)
+- [surround](https://github.com/tpope/vim-surround)
+- [tcomment](https://github.com/tomtom/tcomment_vim)
+- [unite](https://github.com/Shougo/unite.vim)
+- [vim-airline](https://github.com/bling/vim-airline)
+- [vim-multiple-cursor](https://github.com/terryma/vim-multiple-cursors)
+- [vim-shell](https://github.com/Shougo/vimshell.vim)
+- [vundle](https://github.com/gmarik/vundle)
+
 Note
 ----
 
