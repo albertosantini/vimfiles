@@ -35,7 +35,7 @@ nnoremap <f4> :cw<cr>:cn<cr>
 nnoremap <s-f4> :cw<cr>:cp<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <s-f6> :bp<cr>
-nnoremap <esc> :nohlsearch<cr>
+nnoremap <silent> <esc> :nohlsearch<cr>
 nnoremap gp `[v`]
 vnoremap < <gv
 vnoremap > >gv
