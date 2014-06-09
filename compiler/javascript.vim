@@ -1,2 +1,2 @@
-CompilerSet makeprg=jshint\ %
+CompilerSet makeprg=eslint\ -f\ compact\ %
 CompilerSet errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
