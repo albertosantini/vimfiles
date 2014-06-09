@@ -1,7 +1,3 @@
-if !has('gui_running')
-    finish
-endif
-
 colorscheme as
 
 winpos 25 25
