@@ -5,7 +5,7 @@ nnoremap <S-f4> :cw<cr>:cp<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <S-f6> :bp<cr>
 nnoremap <Leader>w :bd<cr>
-nnoremap <Leader>t :e#<cr>
+nnoremap <Leader>t :browse oldfiles<cr>
 nnoremap <silent> <esc> :nohlsearch<cr>
 nnoremap gp `[v`]
 vnoremap < <gv
