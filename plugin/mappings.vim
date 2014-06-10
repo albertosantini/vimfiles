@@ -1,11 +1,11 @@
 " Util mappings
-nnoremap <f2> :ls<cr>
 nnoremap <f4> :cw<cr>:cn<cr>
 nnoremap <S-f4> :cw<cr>:cp<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <S-f6> :bp<cr>
-nnoremap <Leader>w :bd<cr>
+nnoremap <Leader>l :ls<cr>
 nnoremap <Leader>t :browse oldfiles<cr>
+nnoremap <Leader>w :bd<cr>
 nnoremap <silent> <esc> :nohlsearch<cr>
 nnoremap gp `[v`]
 vnoremap < <gv
