@@ -6,8 +6,6 @@ This repository contains the configuration of my preferred editor:
 
 I have been using release 7.4 on Windows 7 64 bit.
 
-I don't use any plugin.
-
 The standard vim folders contain the configuration for my programming needs
 about color theme, indentation, compiler settings and so on:
 
@@ -15,9 +13,28 @@ about color theme, indentation, compiler settings and so on:
 - [R](http://www.r-project.org/)
 
 
-Plugins in the radar:
+## Batteries included
 
 - [fugitive](https://github.com/tpope/vim-fugitive)
+
+## Custom mappings
+
+- `<f4>` next error in quickfix
+- `<S-f4>` previous error in quickfix
+- `<f6>` next buffer
+- `<S-f6>` previous buffer
+- `<Leader>l` list buffers
+- `<Leader>t` browse old files
+- `<Leader>w` close buffer
+- `<A-j>` move down line(s)
+- `<A-k>` move up line(s)
+- `<Leader>cc` comment line(s)
+- `<Leader>cu` uncomment line(s)
+- `<C-S-P>` show syntax highlight
+
+
+## Plugins in the radar
+
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [surround](https://github.com/tpope/vim-surround)
 - [tcomment](https://github.com/tomtom/tcomment_vim)
