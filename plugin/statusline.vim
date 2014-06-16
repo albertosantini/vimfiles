@@ -2,7 +2,7 @@ set laststatus=2
 set noshowmode
 
 set statusline=
-set statusline +=%7*%{MyMode()}%*               "mode
+set statusline +=%7*%7{MyMode()}%*              "mode
 set statusline +=%1*\ %n\ %*                    "buffer number
 set statusline +=%5*%{&ff}\ %*                  "file format
 set statusline +=%6*%{fugitive#statusline()}    "git branch
@@ -13,9 +13,9 @@ set statusline +=%1*%=%5l%*                     "current line
 set statusline +=%2*/%L%*                       "total lines
 set statusline +=%1*,%v\ %*                     "virtual column number
 
-let s:color_normal  = "guibg=#000000 guifg=#7dcc7d"
-let s:color_insert  = "guibg=#000000 guifg=#ff0000"
-let s:color_replace = "guibg=#000000 guifg=#5b7fbb"
+let s:color_normal  = "guibg=#000000 guifg=#7DCC7D"
+let s:color_insert  = "guibg=#000000 guifg=#FF0000"
+let s:color_replace = "guibg=#000000 guifg=#5B7FBB"
 let s:color_visual  = "guibg=#000000 guifg=#810085"
 
 function! MyMode()
