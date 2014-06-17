@@ -9,28 +9,28 @@ set statusline +=%6*%{fugitive#statusline()}    "git branch
 set statusline +=%3*%y%*                        "file type
 set statusline +=%4*\ %<%F%*                    "full path
 set statusline +=%2*%m%*                        "modified flag
-set statusline +=%1*%=%5l/%*                    "current line
+set statusline +=%1*%=%5l:%v\ %*                "current line and column
 set statusline +=%2*%L%*                        "total lines
-set statusline +=%1*,%v\ %*                     "virtual column number
 
 let s:color_normal  = "guifg=#7DCC7D guibg=#000000"
 let s:color_insert  = "guifg=#FF0000 guibg=#000000"
 let s:color_replace = "guifg=#5B7FBB guibg=#000000"
 let s:color_visual  = "guifg=#810085 guibg=#000000"
 
-let s:repo_ok = "guifg=#5B7FBB guibg=#000000"
-let s:repo_ko = "guifg=#FF0000 guibg=#000000"
+let s:repo_clean = "guifg=#5B7FBB guibg=#000000"
+let s:repo_dirty = "guifg=#FF0000 guibg=#000000"
 
 function! statusline#mode()
-    redraw
     let l:mode = mode()
 
     if     mode ==# "n"  | exec "hi User7 ".s:color_normal  | return "NORMAL"
     elseif mode ==# "i"  | exec "hi User7 ".s:color_insert  | return "INSERT"
     elseif mode ==# "R"  | exec "hi User7 ".s:color_replace | return "REPLACE"
+    elseif mode ==# "c"  | exec "hi User7 ".s:color_insert  | return "COMMAND"
+    elseif mode ==# "s"  | exec "hi User7 ".s:color_visual  | return "SELECT"
     elseif mode ==# "v"  | exec "hi User7 ".s:color_visual  | return "VISUAL"
     elseif mode ==# "V"  | exec "hi User7 ".s:color_visual  | return "VLINE"
-    elseif mode ==# " "  | exec "hi User7 ".s:color_visual  | return "VBLOCK"
+    elseif mode ==# "" | exec "hi User7 ".s:color_visual  | return "VBLOCK"
     else                 | return l:mode
     endif
 endfunction
@@ -46,17 +46,20 @@ endfunction
 autocmd! ColorScheme * call statusline#colors()
 
 function! statusline#repo()
-    let branch = fugitive#statusline()
+    let l:branch = fugitive#statusline()
 
-    if !empty(branch) | exec "cd %:p:h" | let status = system("git status --porcelain")
-    else              | let status = ""
+    if !empty(l:branch)
+        if !empty(glob("%:p:h"))
+            exec "cd %:p:h"
+        endif
+        if !empty(system("git status --porcelain"))
+            exec "hi User6 ".s:repo_dirty
+        else
+            exec "hi User6 ".s:repo_clean
+        endif
     endif
 
-    if empty(status) | exec "hi User6 ".s:repo_ok
-    else             | exec "hi User6 ".s:repo_ko
-    endif
-
-    return branch
+    return l:branch
 endfunction
 
 autocmd! BufEnter,BufWritePost * call statusline#repo()
