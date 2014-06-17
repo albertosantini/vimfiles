@@ -21,12 +21,13 @@ let s:repo_clean = "guifg=#5B7FBB guibg=#000000"
 let s:repo_dirty = "guifg=#FF0000 guibg=#000000"
 
 function! statusline#mode()
+    redraw
     let l:mode = mode()
 
     if     mode ==# "n"  | exec "hi User7 ".s:color_normal  | return "NORMAL"
     elseif mode ==# "i"  | exec "hi User7 ".s:color_insert  | return "INSERT"
     elseif mode ==# "R"  | exec "hi User7 ".s:color_replace | return "REPLACE"
-    elseif mode ==# "c"  | exec "hi User7 ".s:color_insert  | return "COMMAND"
+    elseif mode ==# "c"  | exec "hi User7 ".s:color_normal  | return "COMMAND"
     elseif mode ==# "s"  | exec "hi User7 ".s:color_visual  | return "SELECT"
     elseif mode ==# "v"  | exec "hi User7 ".s:color_visual  | return "VISUAL"
     elseif mode ==# "V"  | exec "hi User7 ".s:color_visual  | return "VLINE"
