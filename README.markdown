@@ -15,7 +15,8 @@ about color theme, indentation, compiler settings and so on:
 
 ## Batteries included
 
-- [fugitive](https://github.com/tpope/vim-fugitive)
+- [fugitive](https://github.com/tpope/vim-fugitive) plugin.
+- Statusline configured.
 
 ## Custom mappings
 
