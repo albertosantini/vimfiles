@@ -59,5 +59,5 @@ function! statusline#repo()
     return branch
 endfunction
 
-autocmd! BufEnter * call statusline#repo()
+autocmd! BufEnter,BufWritePost * call statusline#repo()
 
