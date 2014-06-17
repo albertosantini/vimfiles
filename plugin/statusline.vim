@@ -21,7 +21,7 @@ let s:color_visual  = "guifg=#810085 guibg=#000000"
 let s:repo_ok = "guifg=#5B7FBB guibg=#000000"
 let s:repo_ko = "guifg=#FF0000 guibg=#000000"
 
-function! g:statusline#mode()
+function! statusline#mode()
     redraw
     let l:mode = mode()
 
@@ -35,7 +35,7 @@ function! g:statusline#mode()
     endif
 endfunction
 
-function! g:statusline#colors()
+function! statusline#colors()
     exec "highlight User1 guifg=#EEA040 guibg=#000000"
     exec "highlight User2 guifg=#DD3333 guibg=#000000"
     exec "highlight User3 guifg=#FF66FF guibg=#000000"
@@ -45,7 +45,7 @@ endfunction
 
 autocmd! ColorScheme * call statusline#colors()
 
-function! g:statusline#repo()
+function! statusline#repo()
     let branch = fugitive#statusline()
 
     if !empty(branch) | exec "cd %:p:h" | let status = system("git status --porcelain")
