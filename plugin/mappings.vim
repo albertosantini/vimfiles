@@ -20,8 +20,13 @@ vnoremap <A-j> :m '>+1<CR>gv
 vnoremap <A-k> :m '<-2<CR>gv
 
 " Comment and uncomment
-noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(substitute(&commentstring, "%s", " ", ""),"\/")<CR>/<CR>:nohlsearch<CR>
-noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(substitute(&commentstring, "%s", " ", ""),"\/")<CR>//e<CR>:nohlsearch<CR>
+function! CommentToggle()
+    let l:comment_char = escape(substitute(&commentstring, "%s", " ", ""),"\/")
+    execute ':silent! s/\([^ ]\)/' . comment_char . '\1/'
+    execute ':silent! s/^\( *\)' . comment_char . ' \?' . comment_char . ' \?/\1/'
+endfunction
+
+noremap <silent> <Leader>c :call CommentToggle()<CR>
 
 " Display the syntax name under the cursor
 nnoremap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>
