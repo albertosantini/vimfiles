@@ -1,16 +1,16 @@
 set laststatus=2
 set noshowmode
 
-set statusline=
-set statusline +=%7*%7{statusline#mode()}%*     "mode
-set statusline +=%1*\ %n\ %*                    "buffer number
-set statusline +=%5*%{&ff}\ %*                  "file format
-set statusline +=%6*%{fugitive#statusline()}    "git branch
-set statusline +=%3*%y%*                        "file type
-set statusline +=%4*\ %<%F%*                    "full path
-set statusline +=%2*%m%*                        "modified flag
-set statusline +=%1*%=%5l:%v\ %*                "current line and column
-set statusline +=%2*%L%*                        "total lines
+let s:statusline = ""
+let s:statusline .= "%7*%7{statusline#mode()}%*"  "mode
+let s:statusline .= "%1* %n %*"                   "buffer number
+let s:statusline .= "%5*%{&ff} %*"                "file format
+let s:statusline .= "%6*%{fugitive#statusline()}" "git branch
+let s:statusline .= "%3*%y%*"                     "file type
+let s:statusline .= "%4* %<%F%*"                  "full path
+let s:statusline .= "%2*%m%*"                     "modified flag
+let s:statusline .= "%1*%=%5l:%v %*"              "current line and column
+let s:statusline .= "%2*%L%*"                     "total lines
 
 let s:color_normal  = "guifg=#7DCC7D guibg=#000000"
 let s:color_insert  = "guifg=#FF0000 guibg=#000000"
@@ -65,3 +65,8 @@ endfunction
 
 autocmd! BufEnter,BufWritePost * call statusline#repo()
 
+autocmd! WinEnter,BufWinEnter *
+    \ call setwinvar(0, "&statusline", s:statusline)
+autocmd! WinLeave,BufWinLeave *
+    \ exec "hi StatusLineNC guifg=#333333 guibg=#BBBBBB" |
+    \ call setwinvar(0, "&statusline", "")
