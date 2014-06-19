@@ -29,8 +29,7 @@ about color theme, indentation, compiler settings and so on:
 - `<Leader>w` close buffer
 - `<A-j>` move down line(s)
 - `<A-k>` move up line(s)
-- `<Leader>cc` comment line(s)
-- `<Leader>cu` uncomment line(s)
+- `<Leader>c` toggle comment line(s)
 - `<C-S-P>` show syntax highlight
 
 
