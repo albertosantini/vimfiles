@@ -66,7 +66,7 @@ endfunction
 autocmd! BufEnter,BufWritePost * call statusline#repo()
 
 autocmd! WinEnter,BufWinEnter *
-    \ call setwinvar(0, "&statusline", s:statusline)
+    \ if &filetype != "qf" | call setwinvar(0, "&statusline", s:statusline)
 autocmd! WinLeave *
     \ exec "hi StatusLineNC guifg=#333333 guibg=#BBBBBB" |
     \ call setwinvar(0, "&statusline", "")
