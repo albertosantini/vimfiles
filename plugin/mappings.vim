@@ -28,5 +28,9 @@ endfunction
 
 noremap <silent> <Leader>c :call CommentToggle()<CR>
 
+" Surround and unsurround with double quote
+nnoremap <Leader>q ciw"<C-R>""<ESC>
+nnoremap <Leader>Q di"hPl2
+
 " Display the syntax name under the cursor
 nnoremap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>
