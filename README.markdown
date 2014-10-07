@@ -17,6 +17,7 @@ about color theme, indentation, compiler settings and so on:
 
 - [fugitive](https://github.com/tpope/vim-fugitive) plugin.
 - Statusline configured.
+- Basic JavaScript snippets.
 
 ## Custom mappings
 
@@ -36,28 +37,40 @@ about color theme, indentation, compiler settings and so on:
 ## Plugins in the radar
 
 - [delimitMate](https://github.com/Raimondi/delimitMate)
+- [neobundle](https://github.com/Shougo/neobundle.vim)
 - [surround](https://github.com/tpope/vim-surround)
 - [tcomment](https://github.com/tomtom/tcomment_vim)
 - [unite](https://github.com/Shougo/unite.vim)
 - [vim-airline](https://github.com/bling/vim-airline)
-- [vundle](https://github.com/gmarik/vundle)
 
 Note
 ----
 
-I have been using Git Bash shell for git commands. I set the EDITOR variable to
+I have been using Git Bash shell for git commands. I set the `EDITOR` variable to
 `vim -i NONE`: so the terminal version of vim does not override the viminfo
 file, when, for instance, I write a comment for a commit.
 
-Instead using submodules, vundle package manager is a viable solution.
+I prefer zero plugin footprint, but, instead using submodules, neobundle package 
+manager may be a viable solution.
 
-Anyway I prefer to tweak manually the runtime path.
-
-In `plugin/vimrc.vim` I may add `runtime bundle/bundle.vim` and `bundle.vim` may contain the following setting, for instance:
+After adding manually `neobundle` plugin in `bundle` folder, I may create, for 
+instance, a `bundle/bundle.vim` file:
 
 ```
-set runtimepath+=~/vimfiles/bundle/tcomment_vim
-set runtimepath+=~/vimfiles/bundle/vim-surround
+set runtimepath+=~/vimfiles/bundle/neobundle.vim
 
-runtime! bundle/**/plugin/*.vim
+call neobundle#begin()
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+
+call neobundle#end()
+
+NeoBundleCheck
+```
+
+Then add at the top of `vimrc`:
+
+```
+runtime! bundle/bundle.vim
 ```
