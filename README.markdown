@@ -42,6 +42,7 @@ about color theme, indentation, compiler settings and so on:
 - [tcomment](https://github.com/tomtom/tcomment_vim)
 - [unite](https://github.com/Shougo/unite.vim)
 - [vim-airline](https://github.com/bling/vim-airline)
+- [vim-plug](https://github.com/junegunn/vim-plug)
 
 Note
 ----
