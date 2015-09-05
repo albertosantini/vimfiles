@@ -36,6 +36,7 @@ about color theme, indentation, compiler settings and so on:
 
 ## Plugins in the radar
 
+- [colorscheme-primary](https://github.com/google/vim-colorscheme-primary)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [neobundle](https://github.com/Shougo/neobundle.vim)
 - [surround](https://github.com/tpope/vim-surround)
