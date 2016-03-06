@@ -4,14 +4,14 @@ VIM configuration
 This repository contains the configuration of my preferred editor:
 [Vim](http://www.vim.org/).
 
-I have been using release 7.4 on Windows 7 64 bit.
+I have been using release 7.4.1498 on Windows 10 64 bit: binaries from
+[vim-win32-installer](https://github.com/vim/vim-win32-installer).
 
 The standard vim folders contain the configuration for my programming needs
 about color theme, indentation, compiler settings and so on:
 
 - [JavaScript](http://nodejs.org/)
 - [R](http://www.r-project.org/)
-
 
 ## Batteries included
 
@@ -38,7 +38,6 @@ about color theme, indentation, compiler settings and so on:
 
 - [colorscheme-primary](https://github.com/google/vim-colorscheme-primary)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
-- [neobundle](https://github.com/Shougo/neobundle.vim)
 - [surround](https://github.com/tpope/vim-surround)
 - [tcomment](https://github.com/tomtom/tcomment_vim)
 - [unite](https://github.com/Shougo/unite.vim)
@@ -48,31 +47,6 @@ about color theme, indentation, compiler settings and so on:
 Note
 ----
 
-I have been using Git Bash shell for git commands. I set the `EDITOR` variable to
-`vim -i NONE`: so the terminal version of vim does not override the viminfo
+I have been using Git Bash shell for git commands. I set the `EDITOR` variable
+to `vim -i NONE`: so the terminal version of vim does not override the viminfo
 file, when, for instance, I write a comment for a commit.
-
-I prefer zero plugin footprint, but, instead using submodules, neobundle package 
-manager may be a viable solution.
-
-After adding manually `neobundle` plugin in `bundle` folder, I may create, for 
-instance, a `bundle/bundle.vim` file:
-
-```
-set runtimepath+=~/vimfiles/bundle/neobundle.vim
-
-call neobundle#begin()
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-
-call neobundle#end()
-
-NeoBundleCheck
-```
-
-Then add at the top of `vimrc`:
-
-```
-runtime! bundle/bundle.vim
-```
