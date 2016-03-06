@@ -50,3 +50,6 @@ Note
 I have been using Git Bash shell for git commands. I set the `EDITOR` variable
 to `vim -i NONE`: so the terminal version of vim does not override the viminfo
 file, when, for instance, I write a comment for a commit.
+
+To fork the project don't forget the recursive option: `git clone --recursive
+https://github.com/albertosantini/vimfiles.git`
