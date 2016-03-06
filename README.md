@@ -7,17 +7,15 @@ This repository contains the configuration of my preferred editor:
 I have been using release 7.4.1498 on Windows 10 64 bit: binaries from
 [vim-win32-installer](https://github.com/vim/vim-win32-installer).
 
-The standard vim folders contain the configuration for my programming needs
-about color theme, indentation, compiler settings and so on:
-
-- [JavaScript](http://nodejs.org/)
-- [R](http://www.r-project.org/)
+The standard Vim folders contain the configuration for my programming needs
+about color theme, indentation, compiler settings and so on for
+[JavaScript](http://nodejs.org/) and [R](http://www.r-project.org/).
 
 ## Batteries included
 
-- [fugitive](https://github.com/tpope/vim-fugitive) plugin.
 - Statusline configured.
 - Basic JavaScript snippets.
+- [fugitive](https://github.com/tpope/vim-fugitive) plugin.
 
 ## Custom mappings
 
@@ -33,23 +31,11 @@ about color theme, indentation, compiler settings and so on:
 - `<Leader>c` toggle comment line(s)
 - `<C-S-P>` show syntax highlight
 
+## Note
 
-## Plugins in the radar
+I have been using Git Bash shell. I export the `EDITOR` variable to `vim -i
+NONE`: so the terminal version of Vim does not override the viminfo file, when,
+for instance, I write a comment for a commit.
 
-- [colorscheme-primary](https://github.com/google/vim-colorscheme-primary)
-- [delimitMate](https://github.com/Raimondi/delimitMate)
-- [surround](https://github.com/tpope/vim-surround)
-- [tcomment](https://github.com/tomtom/tcomment_vim)
-- [unite](https://github.com/Shougo/unite.vim)
-- [vim-airline](https://github.com/bling/vim-airline)
-- [vim-plug](https://github.com/junegunn/vim-plug)
-
-Note
-----
-
-I have been using Git Bash shell for git commands. I set the `EDITOR` variable
-to `vim -i NONE`: so the terminal version of vim does not override the viminfo
-file, when, for instance, I write a comment for a commit.
-
-To fork the project don't forget the recursive option: `git clone --recursive
-https://github.com/albertosantini/vimfiles.git`
+To fork the project don't forget the recursive option to clone also the
+submodules: `git clone --recursive https://github.com/albertosantini/vimfiles.git`
