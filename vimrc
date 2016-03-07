@@ -30,3 +30,4 @@ set visualbell
 
 autocmd! BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 autocmd! VimEnter * nested if empty(expand('%')) | keepalt bd | endif
+autocmd! QuickFixCmdPost *grep* cwindow
