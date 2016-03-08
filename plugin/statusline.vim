@@ -29,6 +29,7 @@ function! statusline#mode()
     elseif mode ==# "R"  | exec "hi User7 ".s:color_replace | return "REPLACE"
     elseif mode ==# "c"  | exec "hi User7 ".s:color_normal  | return "COMMAND"
     elseif mode ==# "s"  | exec "hi User7 ".s:color_visual  | return "SELECT"
+    elseif mode ==# "S"  | exec "hi User7 ".s:color_visual  | return "SELECT ALL"
     elseif mode ==# "v"  | exec "hi User7 ".s:color_visual  | return "VISUAL"
     elseif mode ==# "V"  | exec "hi User7 ".s:color_visual  | return "VLINE"
     elseif mode ==# "" | exec "hi User7 ".s:color_visual  | return "VBLOCK"
