@@ -33,9 +33,12 @@ about color theme, indentation, compiler settings and so on for
 
 ## Note
 
-I have been using Git Bash shell. I export the `EDITOR` variable to `vim -i
-NONE`: so the terminal version of Vim does not override the viminfo file, when,
-for instance, I write a comment for a commit.
+Not to override the viminfo file using a terminal version of Vim, when,
+for instance, writing a quick and short comment for a commit.
 
-To fork the project don't forget the recursive option to clone also the
-submodules: `git clone --recursive https://github.com/albertosantini/vimfiles.git`
+- `export EDITOR="vim -i NONE"`
+
+Don't forget the recursive option to clone the project with the submodules:
+
+- `git clone --recursive https://github.com/albertosantini/vimfiles.git`
+
