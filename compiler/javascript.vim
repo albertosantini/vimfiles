@@ -1,2 +1,2 @@
 CompilerSet makeprg=eslint\ -f\ compact
-CompilerSet errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
+CompilerSet errorformat=%E%f:\ line\ %l\\,\ col\ %c\\,\ %m,%C%.%#
