@@ -38,7 +38,7 @@ for instance, writing a quick and short comment for a commit.
 
 - `export EDITOR="vim -i NONE"`
 
-Don't forget the recursive option to clone the project with the submodules:
+Don't forget the recursive option to clone the project with the submodules.
 
 - `git clone --recursive https://github.com/albertosantini/vimfiles.git`
 
