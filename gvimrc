@@ -7,3 +7,5 @@ set guioptions=
 set lines=49
 
 source $VIMRUNTIME/mswin.vim
+
+set selection=inclusive
