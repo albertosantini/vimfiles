@@ -1,6 +1,6 @@
 " Util mappings
 
-function! <SID>TryCatch(TryCmd, CatchCmd)
+function! <SID>QuickCycle(TryCmd, CatchCmd)
     try
         execute a:TryCmd
     catch /^Vim\%((\a\+)\)\=:E553/
@@ -8,8 +8,8 @@ function! <SID>TryCatch(TryCmd, CatchCmd)
     endtry
 endfunction
 
-nnoremap <f4> :cw<cr>:call <SID>TryCatch("cn", "cfirst")<cr>
-nnoremap <S-f4> :cw<cr>:call <SID>TryCatch("cp", "clast")<cr>
+nnoremap <f4> :cw<cr>:call <SID>QuickCycle("cn", "cfirst")<cr>
+nnoremap <S-f4> :cw<cr>:call <SID>QuickCycle("cp", "clast")<cr>
 nnoremap <f6> :bn<cr>
 nnoremap <S-f6> :bp<cr>
 nnoremap <Leader>l :ls<cr>
