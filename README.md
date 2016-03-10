@@ -43,3 +43,6 @@ Don't forget the recursive option to clone the project with the submodules.
 
 - `git clone --recursive https://github.com/albertosantini/vimfiles.git`
 
+Finally to update the submodule.
+
+- `git submodule update --remote --merge`
