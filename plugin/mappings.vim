@@ -8,14 +8,14 @@ function! <SID>QuickCycle(TryCmd, CatchCmd)
     endtry
 endfunction
 
-nnoremap <f4> :cw<cr>:call <SID>QuickCycle("cn", "cfirst")<cr>
-nnoremap <S-f4> :cw<cr>:call <SID>QuickCycle("cp", "clast")<cr>
-nnoremap <f6> :bn<cr>
-nnoremap <S-f6> :bp<cr>
-nnoremap <Leader>l :ls<cr>
-nnoremap <Leader>t :browse oldfiles<cr>
-nnoremap <Leader>w :bd<cr>
-nnoremap <silent> <esc> :nohlsearch<cr>
+nnoremap <f4> :cw<CR>:call <SID>QuickCycle("cn", "cfirst")<CR>
+nnoremap <S-f4> :cw<CR>:call <SID>QuickCycle("cp", "clast")<CR>
+nnoremap <f6> :bn<CR>
+nnoremap <S-f6> :bp<CR>
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>t :browse oldfiles<CR>
+nnoremap <Leader>w :bd<CR>
+nnoremap <silent> <esc> :nohlsearch<CR>
 nnoremap gp `[v`]
 vnoremap < <gv
 vnoremap > >gv
