@@ -4,7 +4,7 @@ VIM configuration
 This repository contains the configuration of my preferred editor:
 [Vim](http://www.vim.org/).
 
-I have been using release 7.4.1510 on Windows 10 64bit: binaries from
+I have been using release 7.4.1529 on Windows 10 64bit: binaries from
 [vim-win32-installer](https://github.com/vim/vim-win32-installer).
 
 The standard Vim folders contain the configuration for my programming needs
