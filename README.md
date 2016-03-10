@@ -23,6 +23,7 @@ about color theme, indentation, compiler settings and so on for
 - `<S-f4>` previous error in quickfix
 - `<f6>` next buffer
 - `<S-f6>` previous buffer
+- `<Leader>e` open netrw
 - `<Leader>l` list buffers
 - `<Leader>t` browse old files
 - `<Leader>w` close buffer
