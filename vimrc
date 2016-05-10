@@ -27,6 +27,7 @@ set tabstop=4
 set viminfo+=%
 set virtualedit=block
 set visualbell
+set wildignore+=*\\node_modules\\*
 
 autocmd! BufWrite * if ! &bin | :%s/\s\+$//ge | endif
 autocmd! VimEnter * nested if empty(expand('%')) | keepalt bd | endif
