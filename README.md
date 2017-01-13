@@ -15,6 +15,7 @@ about color theme, indentation, compiler settings and so on for
 
 - Statusline configured.
 - Basic JavaScript snippets.
+- [asyncrun](https://github.com/skywind3000/asyncrun.vim) plugin.
 - [fugitive](https://github.com/tpope/vim-fugitive) plugin.
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) plugin.
 
