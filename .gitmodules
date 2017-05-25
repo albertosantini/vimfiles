@@ -4,6 +4,3 @@
 [submodule "pack/my/start/ctrlp.vim"]
 	path = pack/my/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "pack/my/start/asyncrun.vim"]
-	path = pack/my/start/asyncrun.vim
-	url = https://github.com/skywind3000/asyncrun.vim.git
