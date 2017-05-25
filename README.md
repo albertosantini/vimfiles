@@ -7,14 +7,8 @@ This repository contains the configuration of my preferred editor:
 I have been using release 8.x on Windows 10 64bit: binaries from
 [vim-win32-installer](https://github.com/vim/vim-win32-installer).
 
-The standard Vim folders contain the configuration for my programming needs
-about color theme, indentation, compiler settings and so on for
-[JavaScript](http://nodejs.org/) and [R](http://www.r-project.org/).
-
 ## Batteries included
 
-- Statusline configured.
-- Basic JavaScript snippets.
 - [fugitive](https://github.com/tpope/vim-fugitive) plugin.
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) plugin.
 
