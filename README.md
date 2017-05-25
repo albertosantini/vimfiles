@@ -28,15 +28,15 @@ I have been using release 8.x on Windows 10 64bit: binaries from
 
 ## Note
 
-Not to override the viminfo file using a terminal version of Vim, when,
+- Not to override the viminfo file using a terminal version of Vim, when,
 for instance, writing a quick and short comment for a commit.
 
-- `export EDITOR="vim -i NONE"`
+`export EDITOR="vim -i NONE"`
 
-Don't forget the recursive option to clone the project with the submodules.
+- Don't forget the recursive option to clone the project with the submodules.
 
-- `git clone --recursive https://github.com/albertosantini/vimfiles.git`
+`git clone --recursive https://github.com/albertosantini/vimfiles.git`
 
-Finally to update the submodule.
+- Eventually to update the submodule.
 
-- `git submodule update --remote --merge`
+`git submodule update --remote --merge`
