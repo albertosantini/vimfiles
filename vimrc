@@ -9,10 +9,12 @@ set hidden
 set hlsearch
 set ignorecase
 set incsearch
+set laststatus=2
 set list listchars=tab:>-,trail:$
 set nobackup
 set nojoinspaces
 set nomodeline
+set noshowmode
 set noswapfile
 set nowrap
 set scrolloff=3
