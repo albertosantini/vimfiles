@@ -43,6 +43,3 @@ nnoremap <Leader>Q di"hPl2
 
 " Return to/from Explorer
 nnoremap <Leader>e :Rexplore<CR>
-
-" Display the syntax name under the cursor
-nnoremap <C-S-P> :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>

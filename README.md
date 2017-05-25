@@ -31,7 +31,6 @@ about color theme, indentation, compiler settings and so on for
 - `<A-j>` move down line(s)
 - `<A-k>` move up line(s)
 - `<Leader>c` toggle comment line(s)
-- `<C-S-P>` show syntax highlight
 
 ## Note
 
