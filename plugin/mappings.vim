@@ -39,7 +39,4 @@ noremap <silent> <Leader>c :call CommentToggle()<CR>
 
 " Surround and unsurround with double quote
 nnoremap <Leader>q ciw"<C-R>""<ESC>
-nnoremap <Leader>Q di"hPl2
-
-" Return to/from Explorer
-nnoremap <Leader>e :Rexplore<CR>
+nnoremap <Leader>Q di"hPl2x
