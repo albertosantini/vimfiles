@@ -1,6 +1,6 @@
 setlocal suffixesadd=.js
 
-autocmd BufWritePost <buffer> compiler javascript | make %
+autocmd BufWritePost <buffer> compiler javascript | silent make %
 autocmd QuickFixCmdPost <buffer> nested cwindow
 
 abbreviate <buffer> con console.log()<esc>
