@@ -10,7 +10,7 @@ I have been using release 8.x on Windows 10 64bit: binaries from
 ## Batteries included
 
 - [fugitive](https://github.com/tpope/vim-fugitive) plugin.
-- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) plugin.
+- eslint linter machinery for js files.
 
 ## Custom mappings
 
