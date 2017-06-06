@@ -6,5 +6,6 @@ set columns=161
 set lines=49
 
 source $VIMRUNTIME/mswin.vim
+unmap <C-F>
 
 set selection=inclusive
