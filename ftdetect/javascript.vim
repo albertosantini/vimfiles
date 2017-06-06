@@ -5,5 +5,5 @@ function! s:SelectJavascript()
         setfiletype javascript
     endif
 endfun
-au BufNewFile,BufRead * call s:SelectJavascript()
+autocmd BufNewFile,BufRead * call s:SelectJavascript()
 
