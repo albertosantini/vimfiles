@@ -6,4 +6,3 @@ function! s:SelectJavascript()
     endif
 endfun
 autocmd BufNewFile,BufRead * call s:SelectJavascript()
-
