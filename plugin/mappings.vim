@@ -1,15 +1,5 @@
 " Util mappings
 
-function! <SID>QuickCycle(TryCmd, CatchCmd)
-    try
-        execute a:TryCmd
-    catch /^Vim\%((\a\+)\)\=:E553/
-        execute a:CatchCmd
-    endtry
-endfunction
-
-nnoremap <f4> :cw<CR>:call <SID>QuickCycle("cn", "cfirst")<CR>
-nnoremap <S-f4> :cw<CR>:call <SID>QuickCycle("cp", "clast")<CR>
 nnoremap <f6> :bn<CR>
 nnoremap <S-f6> :bp<CR>
 nnoremap <Leader>l :ls<CR>
