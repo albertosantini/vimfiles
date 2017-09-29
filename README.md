@@ -14,8 +14,6 @@ I have been using release 8.x on Windows 10 64bit: binaries from
 
 ## Custom mappings
 
-- `<f4>` next error in quickfix
-- `<S-f4>` previous error in quickfix
 - `<f6>` next buffer
 - `<S-f6>` previous buffer
 - `<Leader>e` open netrw
@@ -26,17 +24,26 @@ I have been using release 8.x on Windows 10 64bit: binaries from
 - `<A-k>` move up line(s)
 - `<Leader>c` toggle comment line(s)
 
+## Plugins
+
+`pack/my/start` folder contains external plugins:
+
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [ale](https://github.com/w0rp/ale)
+
+In `z/plugin` there are the configurations of the plugins.
+
+### How to install the plugins
+
+Execute the following commands in `pack/my/start` folder:
+
+- git clone https://github.com/tpope/vim-fugitive.git
+- git clone https://github.com/w0rp/ale.git
+
+
 ## Note
 
-- Not to override the viminfo file using a terminal version of Vim, when,
+ Not to override the viminfo file using a terminal version of Vim, when,
 for instance, writing a quick and short comment for a commit.
 
 `export EDITOR="vim -i NONE"`
-
-- Don't forget the recursive option to clone the project with the submodules.
-
-`git clone --recursive https://github.com/albertosantini/vimfiles.git`
-
-- Eventually to update the submodule.
-
-`git submodule update --remote --merge`
