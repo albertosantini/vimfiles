@@ -7,11 +7,6 @@ This repository contains the configuration of my preferred editor:
 I have been using release 8.x on Windows 10 64bit: binaries from
 [vim-win32-installer](https://github.com/vim/vim-win32-installer).
 
-## Batteries included
-
-- [fugitive](https://github.com/tpope/vim-fugitive) plugin.
-- eslint linter machinery for js files.
-
 ## Custom mappings
 
 - `<f6>` next buffer
