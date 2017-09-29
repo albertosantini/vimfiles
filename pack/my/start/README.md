@@ -11,5 +11,5 @@ Tnis folder contains external plugins:
 
 Execute the following commands in `start` folder:
 
-- git clone https://github.com/w0rp/ale.git
 - git clone https://github.com/tpope/vim-fugitive.git
+- git clone https://github.com/w0rp/ale.git
