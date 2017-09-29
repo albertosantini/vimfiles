@@ -1,7 +1,7 @@
 Plugins
 =======
 
-Tnis folder contains external plugins:
+This folder contains external plugins:
 
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ale](https://github.com/w0rp/ale)
