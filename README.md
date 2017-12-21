@@ -21,20 +21,12 @@ I have been using release 8.x on Windows 10 64bit: binaries from
 
 ## Plugins
 
-`pack/my/start` folder contains external plugins:
+`pack/my/start` folder contains external plugins you need to clone:
 
-- [vim-fugitive](https://github.com/tpope/vim-fugitive)
-- [ale](https://github.com/w0rp/ale)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive) (`git clone https://github.com/tpope/vim-fugitive.git`)
+- [ale](https://github.com/w0rp/ale) (`git clone https://github.com/w0rp/ale.git`)
 
 In `z/plugin` there are the configurations of the plugins.
-
-### How to install the plugins
-
-Execute the following commands in `pack/my/start` folder:
-
-- git clone https://github.com/tpope/vim-fugitive.git
-- git clone https://github.com/w0rp/ale.git
-
 
 ## Note
 
