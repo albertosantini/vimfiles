@@ -1,6 +1,3 @@
 .netrwhist
 .netrwbook
 .cache
-pack/my/start/coc.nvim/
-pack/my/start/vim-polyglot/
-pack/my/start/vim-fugitive/
