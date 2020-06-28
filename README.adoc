@@ -1,7 +1,7 @@
 = VIM configuration
 
 This repository contains the configuration of my preferred editor:
-[Vim](http://www.vim.org/).
+http://www.vim.org[Vim].
 
 == Custom mappings
 
