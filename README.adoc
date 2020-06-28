@@ -1,10 +1,9 @@
-VIM configuration
-=================
+= VIM configuration
 
 This repository contains the configuration of my preferred editor:
 [Vim](http://www.vim.org/).
 
-## Custom mappings
+== Custom mappings
 
 - `<f6>` next buffer
 - `<S-f6>` previous buffer
@@ -15,3 +14,7 @@ This repository contains the configuration of my preferred editor:
 - `<A-j>` move down line(s)
 - `<A-k>` move up line(s)
 - `<Leader>c` toggle comment line(s)
+
+== Plugin
+
+- git clone https://github.com/preservim/nerdtree.git ~/vimfiles/pack/vendor/start/nerdtree
