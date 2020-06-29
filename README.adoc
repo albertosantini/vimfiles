@@ -18,4 +18,5 @@ http://www.vim.org[Vim].
 == Plugin
 
 - git clone https://github.com/preservim/nerdtree.git ~/vimfiles/pack/vendor/start/nerdtree
-- git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/vimfiles/pack/vendor/start/nerdtree
+- git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/vimfiles/pack/vendor/start/ctrlp.vim
+- git clone https://tpope.io/vim/fugitive.git ~/vimfiles/pack/vendor/start/fugitive
